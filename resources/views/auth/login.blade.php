@@ -46,6 +46,9 @@
     </form>
 </x-guest-layout> --}}
 <x-guest-layout>
+   <x-slot name="title">
+        Login
+    </x-slot>
 <!-- bg shape area start -->
 <div class="bg-shape">
     <img src="assets/img/shape/shape-1.png" alt="">
@@ -76,7 +79,7 @@
              <div class="sign__wrapper white-bg">
                 <div class="sign__header mb-35">
                    <div class="sign__in text-center">
-                      <a href="#" class="sign__social text-start mb-15"><i class="fab fa-facebook-f"></i>Sign in with Facebook</a>
+                      <a href="#" class="sign__social g-plus text-start mb-15"><i class="fab fa-google-plus-g"></i>Sign In with Google</a>
                       <p> <span>........</span> Or, <a href="sign-in.html">sign in</a> with your email<span> ........</span> </p>
                    </div>
                 </div>
@@ -84,7 +87,7 @@
                    <form method="POST" action="{{route('login')}}">
                     @csrf
                       <div class="sign__input-wrapper mb-25">
-                         <h5>Work email</h5>
+                         <h5>Email</h5>
                          <div class="sign__input">
                             <input id="email" type="email" placeholder="e-mail address" name="email" :value="old('email')" required autofocus autocomplete="username">
                             <i class="fal fa-envelope"></i>

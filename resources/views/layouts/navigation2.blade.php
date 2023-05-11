@@ -6,7 +6,7 @@
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                     <div class="logo">
                         <a href="/">
-                            <img src="assets/img/logo/logo.png" alt="logo">
+                            <img src="assets/img/logo/Logo Seilo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -14,21 +14,12 @@
                     <div class="main-menu d-flex justify-content-end">
                         <nav id="mobile-menu">
                             <ul>
-                                <li class="active">
-                                    <a href="/">Home</a>
+                                <li class="{{request()->routeIs('home') ? 'active': ''}}"><a href="{{route('home')}}">Home</a></li>
+                                <li class="{{request()->routeIs('about') ? 'active': ''}}"><a href="{{route('about')}}">About Us</a></li>
+
+                                <li class="{{request()->routeIs('blog') ? 'active': ''}}"><a href="{{route('blog')}}">Blog</a>
                                 </li>
-
-                                <li><a href="product.html">About Us</a></li>
-
-                                <li class="has-dropdown">
-                                    <a href="blog.html">Blog</a>
-
-                                    <ul class="submenu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Program</a></li>
+                                <li class="{{request()->routeIs('program') ? 'active': ''}}"><a href="{{route('program')}}">Program</a></li>
                             </ul>
                         </nav>
                     </div>
