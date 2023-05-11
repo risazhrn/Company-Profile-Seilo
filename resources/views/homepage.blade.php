@@ -8,12 +8,12 @@
         <!-- hero area start -->
         <section class="hero__area hero__height grey-bg-3 d-flex align-items-center">
             <div class="hero__shape">
-                <img class="circle" src="assets/img/icon/hero/hero-circle.png" alt="circle">
-                <img class="circle-2" src="assets/img/icon/hero/hero-circle-2.png" alt="circle">
-                <img class="square" src="assets/img/icon/hero/hero-square.png" alt="circle">
-                <img class="square-2" src="assets/img/icon/hero/hero-square-2.png" alt="circle">
-                <img class="dot" src="assets/img/icon/hero/hero-dot.png" alt="circle">
-                <img class="triangle" src="assets/img/icon/hero/hero-triangle.png" alt="circle">
+                <img class="circle" src="{{asset('img/icon/hero/hero-circle.png')}}" alt="circle">
+                <img class="circle-2" src="{{asset('img/icon/hero/hero-circle-2.png')}}" alt="circle">
+                <img class="square" src="{{asset('img/icon/hero/hero-square.png')}}" alt="circle">
+                <img class="square-2" src="{{asset('img/icon/hero/hero-square-2.png')}}" alt="circle">
+                <img class="dot" src="{{asset('img/icon/hero/hero-dot.png')}}" alt="circle">
+                <img class="triangle" src="{{asset('img/icon/hero/hero-triangle.png')}}" alt="circle">
             </div>
             <div class="container">
                 <div class="row">
@@ -40,13 +40,13 @@
                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                         <div class="hero__thumb-wrapper scene ml-70">
                             <div class="hero__thumb one d-none d-lg-block">
-                                <img class="layer" data-depth="0.2" src="assets/img/hero/hero-1.jpg" alt="">
+                                <img class="layer" data-depth="0.2" src="{{asset('img/hero/hero-1.jpg')}}" alt="">
                             </div>
                             <div class="hero__thumb two">
-                                <img class="layer" data-depth="0.3" src="assets/img/hero/hero-2.jpg" alt="">
+                                <img class="layer" data-depth="0.3" src="{{asset('img/hero/hero-2.jpg')}}" alt="">
                             </div>
                             <div class="hero__thumb three">
-                                <img class="layer" data-depth="0.4" src="assets/img/hero/hero-3.jpg" alt="">
+                                <img class="layer" data-depth="0.4" src="{{asset('img/hero/hero-3.jpg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                             <div class="product__thumb">
                                 <div class="product__thumb-inner fix w-img">
                                     <a href="product-details.html">
-                                        <img src="assets/img/product/product-1.jpg" alt="">
+                                        <img src="{{asset('img/product/product-1.jpg')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="product__thumb-btn transition-3">
@@ -107,7 +107,7 @@
                             <div class="product__thumb">
                                 <div class="product__thumb-inner fix w-img">
                                     <a href="product-details.html">
-                                        <img src="assets/img/product/product-2.jpg" alt="">
+                                        <img src="{{asset('img/product/product-2.jpg')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="product__thumb-btn transition-3">
@@ -142,7 +142,7 @@
                             <div class="product__thumb">
                                 <div class="product__thumb-inner fix w-img">
                                     <a href="product-details.html">
-                                        <img src="assets/img/product/product-3.jpg" alt="">
+                                        <img src="{{asset('img/product/product-3.jpg')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="product__thumb-btn transition-3">
@@ -626,14 +626,14 @@
                     <div class="col-xxl-12">
                         <div class="testimonial__wrapper p-relative pb-135 wow fadeInUp" data-wow-delay=".5s">
                             <div class="testimonial__shape">
-                                <img src="assets/img/testimonial/testimonial-shape.png" alt="">
+                                <img src="{{asset('img/testimonial/testimonial-shape.png')}}" alt="">
                             </div>
                             <div class="testimonial__slider-2 owl-carousel">
                                 <div class="testimonial__item-2">
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="assets/img/testimonial/testi-1.jpg" alt="">
+                                                <img src="{{asset('img/testimonial/testi-1.jpg')}}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Justin Case</h5>
@@ -659,7 +659,7 @@
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="assets/img/testimonial/testi-2.jpg" alt="">
+                                                <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Gunther Beard</h5>
@@ -685,7 +685,7 @@
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="assets/img/testimonial/testi-3.jpg" alt="">
+                                                <img src="{{asset('img/testimonial/testi-3.jpg')}}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Shahnewaz Sakil</h5>
@@ -711,7 +711,7 @@
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="assets/img/testimonial/testi-4.jpg" alt="">
+                                                <img src="{{asset('img/testimonial/testi-4.jpg')}}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Shamiha Islam</h5>

@@ -7,7 +7,7 @@
 
          <!-- bg shape area start -->
          <div class="bg-shape">
-            <img src="assets/img/shape/shape-1.png" alt="">
+            <img src="{{asset('img/shape/shape-1.png')}}" alt="">
          </div>
          <!-- bg shape area end -->
 
@@ -21,7 +21,7 @@
                         <span class="about__sub-title">About Markit</span>
                         <h3 class="about__title">We're enabling <br> Everyone to create for the website.</h3>
                         <div class="about__thumb w-img wow fadeInUp" data-wow-delay=".3s">
-                           <img src="assets/img/about/about-1.jpg" alt="">
+                           <img src="{{asset('img/about/about-1.jpg')}}" alt="">
                         </div>
                         <div class="about__count pt-50 pb-15 wow fadeInUp" data-wow-delay=".5s">
                            <div class="row">
@@ -63,19 +63,19 @@
                   <div class="col-xxl-12">
                      <div class="brand__slider owl-carousel wow fadeInUp" data-wow-delay=".5s">
                         <div class="brand__thumb">
-                           <img src="assets/img/brand/brand-1.png" alt="">
+                           <img src="{{asset('img/brand/brand-1.png')}}" alt="">
                         </div>
                         <div class="brand__thumb">
-                           <img src="assets/img/brand/brand-2.png" alt="">
+                           <img src="{{asset('img/brand/brand-2.png')}}" alt="">
                         </div>
                         <div class="brand__thumb">
-                           <img src="assets/img/brand/brand-3.png" alt="">
+                           <img src="{{asset('img/brand/brand-3.png')}}" alt="">
                         </div>
                         <div class="brand__thumb">
-                           <img src="assets/img/brand/brand-4.png" alt="">
+                           <img src="{{asset('img/brand/brand-4.png')}}" alt="">
                         </div>
                         <div class="brand__thumb">
-                           <img src="assets/img/brand/brand-5.png" alt="">
+                           <img src="{{asset('img/brand/brand-5.png')}}" alt="">
                         </div>
                      </div>
                   </div>
@@ -89,7 +89,7 @@
             <div class="container">
                <div class="testimonial__inner p-relative pb-110">
                   <div class="testimonial__bg p-absolute">
-                     <img src="assets/img/bg/testimonial-bg.png" alt="">
+                     <img src="{{asset('img/bg/testimonial-bg.png')}}" alt="">
                   </div>
                   <div class="row">
                      <div class="col-xxl-12">
@@ -97,7 +97,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-1.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-1.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Justin Case</h5>
@@ -111,7 +111,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-2.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Gunther Beard</h5>
@@ -125,7 +125,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-3.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-3.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Joss Sticks</h5>
@@ -139,7 +139,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-4.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-4.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Samuel Serif</h5>
@@ -153,7 +153,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-2.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Shahnewaz Sakil</h5>
@@ -167,7 +167,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-3.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-3.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Joss Sticks</h5>
@@ -181,7 +181,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-2.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Gunther Beard</h5>
@@ -195,7 +195,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-4.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-4.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Samuel Serif</h5>
@@ -209,7 +209,7 @@
                            <div class="testimonial__item white-bg">
                               <div class="testimonial__person d-flex mb-20">
                                  <div class="testimonial__avater">
-                                    <img src="assets/img/testimonial/testi-1.jpg" alt="">
+                                    <img src="{{asset('img/testimonial/testi-1.jpg')}}" alt="">
                                  </div>
                                  <div class="testimonial__info ml-15">
                                     <h5>Samuel Serif</h5>
@@ -258,15 +258,15 @@
                <div class="row">
                   <div class="col-xxl-10 offset-xxl-1">
                      <div class="community__wrapper p-relative wow fadeInUp" data-wow-delay=".7s">
-                        <img class="community-map" src="assets/img/shape/map.png" alt="">
+                        <img class="community-map" src="{{asset('img/shape/map.png')}}" alt="">
                         <div class="community__person">
-                           <img class="com-1" src="assets/img/community/com-1.jpg" alt="">
-                           <img class="com-2" src="assets/img/community/com-2.jpg" alt="">
-                           <img class="com-3" src="assets/img/community/com-3.jpg" alt="">
-                           <img class="com-4" src="assets/img/community/com-4.jpg" alt="">
-                           <img class="com-5" src="assets/img/community/com-5.jpg" alt="">
-                           <img class="com-6" src="assets/img/community/com-6.jpg" alt="">
-                           <img class="com-7" src="assets/img/community/com-7.jpg" alt="">
+                           <img class="com-1" src="{{asset('img/community/com-1.jpg')}}" alt="">
+                           <img class="com-2" src="{{asset('img/community/com-2.jpg')}}" alt="">
+                           <img class="com-3" src="{{asset('img/community/com-3.jpg')}}" alt="">
+                           <img class="com-4" src="{{asset('img/community/com-4.jpg')}}" alt="">
+                           <img class="com-5" src="{{asset('img/community/com-5.jpg')}}" alt="">
+                           <img class="com-6" src="{{asset('img/community/com-6.jpg')}}" alt="">
+                           <img class="com-7" src="{{asset('img/community/com-7.jpg')}}" alt="">
                         </div>
                      </div>
                   </div>
@@ -276,13 +276,13 @@
          <!-- community area end -->
 
          <!-- subscribe area start -->
-         <section class="subscribe__area p-relative pt-100 pb-110" data-background="assets/img/bg/subscribe-bg.jpg">
+         <section class="subscribe__area p-relative pt-100 pb-110" data-background="{{asset('img/bg/subscribe-bg.jpg')}}">
             <div class="subscribe__icon">
-               <img class="ps" src="assets/img/icon/subscribe/ps.png" alt="">
-               <img class="wp" src="assets/img/icon/subscribe/wp.png" alt="">
-               <img class="html" src="assets/img/icon/subscribe/html.png" alt="">
-               <img class="f" src="assets/img/icon/subscribe/f.png" alt="">
-               <img class="man" src="assets/img/icon/subscribe/man.png" alt="">
+               <img class="ps" src="{{asset('img/icon/subscribe/ps.png')}}" alt="">
+               <img class="wp" src="{{asset('img/icon/subscribe/wp.png')}}" alt="">
+               <img class="html" src="{{asset('img/icon/subscribe/html.png')}}" alt="">
+               <img class="f" src="{{asset('img/icon/subscribe/f.png')}}" alt="">
+               <img class="man" src="{{asset('img/icon/subscribe/man.png')}}" alt="">
             </div>
             <div class="container">
                <div class="row">
@@ -302,7 +302,7 @@
                </div>
             </div>
          </section>
-         <!-- subscribe area end --> 
+         <!-- subscribe area end -->
       </main>
 
 </x-guest-layout>

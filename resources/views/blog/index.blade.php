@@ -7,7 +7,7 @@
 
          <!-- bg shape area start -->
          <div class="bg-shape">
-            <img src="assets/img/shape/shape-1.png" alt="">
+            <img src="{{asset('img/shape/shape-1.png')}}" alt="">
          </div>
          <!-- bg shape area end -->
 
@@ -40,7 +40,7 @@
                         <article class="postbox__item format-image fix mb-50 wow fadeInUp" data-wow-delay=".2s">
                            <div class="postbox__thumb">
                               <a href="blog-details.html" class="w-img">
-                                 <img src="assets/img/blog/blog-1.jpg" alt="">
+                                 <img src="{{asset('img/blog/blog-1.jpg')}}" alt="">
                               </a>
                            </div>
                            <div class="postbox__content">
@@ -58,7 +58,7 @@
                               </div>
                               <div class="postbox__author d-flex align-items-center">
                                  <div class="postbox__author-thumb mr-15">
-                                    <img src="assets/img/blog/author/blog-author-1.jpg" alt="">
+                                    <img src="{{asset('img/blog/author/blog-author-1.jpg')}}" alt="">
                                  </div>
                                  <h5>Post by <a href="#">Justin Case</a> </h5>
                               </div>
@@ -67,7 +67,7 @@
                         <article class="postbox__item  format-video fix mb-50 wow fadeInUp" data-wow-delay=".5s">
                            <div class="postbox__thumb postbox__video">
                               <a href="blog-details.html" class="w-img">
-                                 <img src="assets/img/blog/blog-2.jpg" alt="">
+                                 <img src="{{asset('img/blog/blog-2.jpg')}}" alt="">
                               </a>
                               <div class="postbox__play">
                                  <a href="https://youtu.be/yJg-Y5byMMw" data-fancybox ><i class="fas fa-play"></i></a>
@@ -88,7 +88,7 @@
                               </div>
                               <div class="postbox__author d-flex align-items-center">
                                  <div class="postbox__author-thumb mr-15">
-                                    <img src="assets/img/blog/author/blog-author-2.jpg" alt="">
+                                    <img src="{{asset('img/blog/author/blog-author-2.jpg')}}" alt="">
                                  </div>
                                  <h5>Post by <a href="#">Jackson Pot</a> </h5>
 
@@ -104,7 +104,7 @@
                         <article class="postbox__item  format-image fix mb-50 wow fadeInUp" data-wow-delay=".7s">
                            <div class="postbox__thumb">
                               <a href="blog-details.html" class="w-img">
-                                 <img src="assets/img/blog/blog-3.jpg" alt="">
+                                 <img src="{{asset('img/blog/blog-3.jpg')}}" alt="">
                               </a>
                            </div>
                            <div class="postbox__content">
@@ -122,7 +122,7 @@
                               </div>
                               <div class="postbox__author d-flex align-items-center">
                                  <div class="postbox__author-thumb mr-15">
-                                    <img src="assets/img/blog/author/blog-author-3.jpg" alt="">
+                                    <img src="{{asset('img/blog/author/blog-author-3.jpg')}}" alt="">
                                  </div>
                                  <h5>Post by <a href="#">Weir Doe</a> </h5>
                               </div>
@@ -131,7 +131,7 @@
                         <article class="postbox__item  format-image fix mb-50 wow fadeInUp" data-wow-delay=".9s">
                            <div class="postbox__thumb">
                               <a href="blog-details.html" class="w-img">
-                                 <img src="assets/img/blog/blog-4.jpg" alt="">
+                                 <img src="{{asset('img/blog/blog-4.jpg')}}" alt="">
                               </a>
                            </div>
                            <div class="postbox__content">
@@ -149,7 +149,7 @@
                               </div>
                               <div class="postbox__author d-flex align-items-center">
                                  <div class="postbox__author-thumb mr-15">
-                                    <img src="assets/img/blog/author/blog-author-3.jpg" alt="">
+                                    <img src="{{asset('img/blog/author/blog-author-3.jpg')}}" alt="">
                                  </div>
                                  <h5>Post by <a href="#">Shahnewaz Sakil</a> </h5>
                               </div>
@@ -217,7 +217,7 @@
                                  <div class="rc__post-wrapper">
                                     <div class="rc__post d-flex align-items-center">
                                        <div class="rc__thumb mr-15">
-                                          <a href="blog-details.html"><img src="assets/img/blog/sm/blog-sm-1.jpg" alt=""></a>
+                                          <a href="blog-details.html"><img src="{{asset('img/blog/sm/blog-sm-1.jpg')}}" alt=""></a>
                                        </div>
                                        <div class="rc__content">
                                           <div class="rc__meta">
@@ -228,7 +228,7 @@
                                     </div>
                                     <div class="rc__post d-flex align-items-center">
                                        <div class="rc__thumb mr-15">
-                                          <a href="blog-details.html"><img src="assets/img/blog/sm/blog-sm-2.jpg" alt=""></a>
+                                          <a href="blog-details.html"><img src="{{asset('img/blog/sm/blog-sm-2.jpg')}}" alt=""></a>
                                        </div>
                                        <div class="rc__content">
                                           <div class="rc__meta">
@@ -239,7 +239,7 @@
                                     </div>
                                     <div class="rc__post d-flex align-items-center">
                                        <div class="rc__thumb mr-15">
-                                          <a href="blog-details.html"><img src="assets/img/blog/sm/blog-sm-3.jpg" alt=""></a>
+                                          <a href="blog-details.html"><img src="{{asset('img/blog/sm/blog-sm-3.jpg')}}" alt=""></a>
                                        </div>
                                        <div class="rc__content">
                                           <div class="rc__meta">
@@ -285,7 +285,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="sidebar__banner" data-background="assets/img/banner/sidebar-banner.jpg">
+                        <div class="sidebar__banner" data-background="{{asset('img/banner/sidebar-banner.jpg')}}">
                            <h4 class="sidebar__banner-title">Check Out <br>Our free Templates</h4>
                            <a href="product.html" class="m-btn m-btn-white"> <span></span> free template</a>
                         </div>

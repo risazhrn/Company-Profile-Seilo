@@ -6,7 +6,7 @@
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                     <div class="logo">
                         <a href="/">
-                            <img src="assets/img/logo/Logo Seilo.png" alt="logo">
+                            <img src="{{asset('img/logo/Logo Seilo.png')}}" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                     <li>
                         <div class="cartmini__thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/sm/cart-5.jpg" alt="">
+                                <img src="{{asset('img/product/sm/cart-5.jpg')}}" alt="">
                             </a>
                         </div>
                         <div class="cartmini__content">
@@ -102,7 +102,7 @@
                     <li>
                         <div class="cartmini__thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/sm/cart-2.jpg" alt="">
+                                <img src="{{asset('img/product/sm/cart-2.jpg')}}" alt="">
                             </a>
                         </div>
                         <div class="cartmini__content">
@@ -122,7 +122,7 @@
                     <li>
                         <div class="cartmini__thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/sm/cart-3.jpg" alt="">
+                                <img src="{{asset('img/product/sm/cart-3.jpg')}}" alt="">
                             </a>
                         </div>
                         <div class="cartmini__content">
@@ -168,7 +168,7 @@
         <div class="sidebar__content">
             <div class="logo mb-40">
                 <a href="index.html">
-                    <img src="assets/img/logo/logo-white.png" alt="logo">
+                    <img src="{{asset('img/logo/logo-white.png')}}" alt="logo">
                 </a>
             </div>
             <div class="mobile-menu"></div>

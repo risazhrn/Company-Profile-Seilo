@@ -7,7 +7,7 @@
 
          <!-- bg shape area start -->
          <div class="bg-shape">
-            <img src="assets/img/shape/shape-1.png" alt="">
+            <img src="{{asset('img/shape/shape-1.png')}}" alt="">
          </div>
          <!-- bg shape area end -->
 
@@ -166,7 +166,7 @@
                               </form>
                            </div>
                         </div>
-                        <div class="sidebar__banner" data-background="assets/img/banner/sidebar-banner.jpg">
+                        <div class="sidebar__banner" data-background="{{asset('img/banner/sidebar-banner.jpg')}}">
                            <h4 class="sidebar__banner-title">Check Out <br>Our free Templates</h4>
                            <a href="product.html" class="m-btn m-btn-white"> <span></span> free template</a>
                         </div>
@@ -179,7 +179,7 @@
                               <div class="product__thumb">
                                  <div class="product__thumb-inner fix w-img">
                                     <a href="product-details.html">
-                                    <img src="assets/img/product/product-1.jpg" alt="">
+                                    <img src="{{asset('img/product/product-1.jpg')}}" alt="">
                                     </a>
                                  </div>
                                  <div class="product__thumb-btn transition-3">
@@ -680,6 +680,6 @@
                </div>
             </div>
          </section>
-         <!-- subscribe area end --> 
+         <!-- subscribe area end -->
       </main>
 </x-guest-layout>
