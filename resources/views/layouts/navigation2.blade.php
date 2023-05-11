@@ -10,8 +10,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xxl-8 col-xl-8 col-lg-8 d-none d-lg-block">
-                    <div class="main-menu">
+                <div class="col-xxl-7 col-xl-7 col-lg-8 d-none d-lg-block">
+                    <div class="main-menu d-flex justify-content-end">
                         <nav id="mobile-menu">
                             <ul>
                                 <li class="active">
@@ -33,11 +33,14 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-8 col-6">
+                <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-8 col-6">
                     <div class="header__action d-flex align-items-center justify-content-end">
-                        <div class="header__login d-none d-sm-block">
+                        <div class="header__login header__login-2 d-none d-sm-block">
                             <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
                         </div>
+                        <div class="header__btn d-none d-xl-block">
+                            <a href="#" class="m-btn m-btn-2">get started</a>
+                         </div>
                         <div class="sidebar__menu d-lg-none">
                             <div class="sidebar-toggle-btn" id="sidebar-toggle">
                                 <span class="line"></span>

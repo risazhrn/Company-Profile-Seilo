@@ -1,4 +1,8 @@
 <x-guest-layout>
+    <x-slot name="title">
+        Landing Page
+    </x-slot>
+
     <main>
         <!-- hero area start -->
         <section class="hero__area hero__height grey-bg-3 d-flex align-items-center">
