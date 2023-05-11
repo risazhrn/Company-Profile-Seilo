@@ -19,8 +19,11 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/blog', function(){
-    return view('blog');
+    return view('blog.index');
 })->name('blog');
+Route::get('/blog/create', function(){
+    return view('blog.create');
+})->name('blog.create');
 Route::get('/about', function(){
     return view('about-us');
 })->name('about');
@@ -36,6 +39,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/admin/blog', function() {
+        return view('admin.blog.index');
+    })->name('admin.blog');
 });
 
 require __DIR__.'/auth.php';

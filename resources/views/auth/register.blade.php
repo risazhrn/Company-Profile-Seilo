@@ -76,12 +76,12 @@
                <div class="row">
                   <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                      <div class="sign__wrapper white-bg">
-                        <div class="sign__header mb-35">
+                        {{-- <div class="sign__header mb-35">
                            <div class="sign__in text-center">
                               <a href="#" class="sign__social g-plus text-start mb-15"><i class="fab fa-google-plus-g"></i>Sign Up with Google</a>
                               <p> <span>........</span> Or, <a href="sign-up.html">sign up</a> with your email<span> ........</span> </p>
                            </div>
-                        </div>
+                        </div> --}}
                         <div class="sign__form">
                            <form  method="POST" action="{{ route('register') }}">
                             @csrf
@@ -90,32 +90,32 @@
                                  <div class="sign__input">
                                     <input type="text" placeholder="Full name" name="name" value="{{old('name')}}" required autofocus autocomplete="name">
                                     <i class="fal fa-user"></i>
-                                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                                 </div>
+                                </div>
+                                <x-input-error :messages="$errors->get('name')" class="mt-2" />
                               </div>
                               <div class="sign__input-wrapper mb-25">
                                  <h5>Email</h5>
                                  <div class="sign__input">
                                     <input type="email" placeholder="e-mail address" name="email" value="{{old('email')}}" required autocomplete="email">
                                     <i class="fal fa-envelope"></i>
-                                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                                 </div>
+                                </div>
+                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
                               </div>
                               <div class="sign__input-wrapper mb-25">
                                  <h5>Password</h5>
                                  <div class="sign__input">
                                     <input type="password" placeholder="Password" name="password" required autocomplete="new-password">
                                     <i class="fal fa-lock"></i>
-                                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                                 </div>
+                                </div>
+                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
                               </div>
                               <div class="sign__input-wrapper mb-10">
                                  <h5>Re-Password</h5>
                                  <div class="sign__input">
                                     <input type="password" placeholder="Re-Password" name="password_confirmation" required autocomplete="new-password">
                                     <i class="fal fa-lock"></i>
-                                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                                 </div>
+                                </div>
+                                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                               </div>
                               <div class="sign__action d-flex justify-content-between mb-30">
                                  <div class="sign__agree d-flex align-items-center">

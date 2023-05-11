@@ -14,24 +14,44 @@
                     <div class="main-menu d-flex justify-content-end">
                         <nav id="mobile-menu">
                             <ul>
-                                <li class="{{request()->routeIs('home') ? 'active': ''}}"><a href="{{route('home')}}">Home</a></li>
-                                <li class="{{request()->routeIs('about') ? 'active': ''}}"><a href="{{route('about')}}">About Us</a></li>
+                                <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a
+                                        href="{{ route('home') }}">Home</a></li>
+                                <li class="{{ request()->routeIs('about') ? 'active' : '' }}"><a
+                                        href="{{ route('about') }}">About Us</a></li>
 
-                                <li class="{{request()->routeIs('blog') ? 'active': ''}}"><a href="{{route('blog')}}">Blog</a>
+                                <li class="{{ request()->routeIs('blog') ? 'active' : '' }}"><a
+                                        href="{{ route('blog') }}">Blog</a>
                                 </li>
-                                <li class="{{request()->routeIs('program') ? 'active': ''}}"><a href="{{route('program')}}">Program</a></li>
+                                <li class="{{ request()->routeIs('program') ? 'active' : '' }}"><a
+                                        href="{{ route('program') }}">Program</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-8 col-6">
                     <div class="header__action d-flex align-items-center justify-content-end">
-                        <div class="header__login header__login-2 d-none d-sm-block">
-                            <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
-                        </div>
-                        <div class="header__btn d-none d-xl-block">
-                            <a href="#" class="m-btn m-btn-2">get started</a>
-                         </div>
+
+                        @auth
+                            <div class="header__login header__login-2 d-none d-sm-block">
+                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a>
+                            </div>
+                            <div class="header__btn d-none d-xl-block">
+                                <form action="{{ route('logout') }}" method="post">
+                                    @csrf
+                                    <button class="m-btn m-btn-2" type="submit">Log Out</button>
+                                </form>
+                            </div>
+                        @endauth
+
+                        @guest
+                            <div class="header__login header__login-2 d-none d-sm-block">
+                                <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
+                            </div>
+                            <div class="header__btn d-none d-xl-block">
+                                <a href="#" class="m-btn m-btn-2">get started</a>
+                            </div>
+                        @endguest
+
                         <div class="sidebar__menu d-lg-none">
                             <div class="sidebar-toggle-btn" id="sidebar-toggle">
                                 <span class="line"></span>
