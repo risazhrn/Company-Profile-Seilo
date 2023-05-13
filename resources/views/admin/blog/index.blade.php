@@ -1,109 +1,204 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Add Blog') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <!-- contact area start -->
-         <section class="contact__area pt-105 pb-145">
-            <div class="contact__shape">
-               <img class="man-1" src="assets/img/icon/sign/man-1.png" alt="">
-               <img class="circle" src="assets/img/icon/sign/circle.png" alt="">
-               <img class="zigzag" src="assets/img/icon/sign/zigzag.png" alt="">
-               <img class="dot" src="assets/img/icon/sign/dot.png" alt="">
-               <img class="bg" src="assets/img/icon/sign/sign-up.png" alt="">
-            </div>
-            <div class="container">
-               <div class="row">
-                  <div class="col-xxl-12">
-                     <div class="page__title-wrapper mb-55">
-                        <h2 class="page__title-2">Leave Us a Message.</h2>
-                        <p>Jolly good bevvy butty it's all gone to pot that quaint so I said cheers.</p>
-                     </div>
+    <x-slot name="title">Blog</x-slot>
+    
+        <div class="card card-body mx-3 mx-md-4 mt-4">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4  z-index-2">
+                  <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                    <h6 class="text-white text-capitalize ps-3">Data Blog</h6>
                   </div>
-               </div>
-               <div class="row">
-                  <div class="col-xxl-7 col-xl-7">
-                     <div class="contact__wrapper  white-bg">
-                        <div class="contact__form">
-                           <form action="assets/mail.php" method="POST">
-                              <div class="row">
-                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div class="contact__input-wrapper mb-25">
-                                       <h5>Full Name</h5>
-                                       <div class="contact__input">
-                                          <input type="text" placeholder="Full name" name="name">
-                                          <i class="fal fa-user"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div class="contact__input-wrapper mb-25">
-                                       <h5>Work email</h5>
-                                       <div class="contact__input">
-                                          <input type="text" placeholder="e-mail address" name="email">
-                                          <i class="fal fa-envelope"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div class="contact__input-wrapper mb-25">
-                                       <h5>Company Name</h5>
-                                       <div class="contact__input">
-                                          <input type="text" placeholder="Company Name" name="subject">
-                                          <i class="fal fa-smile"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                                    <div class="contact__input-wrapper mb-25">
-                                       <h5>Website</h5>
-                                       <div class="contact__input">
-                                          <input type="text" placeholder="Website" name="website">
-                                          <i class="fal fa-globe"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-xxl-12">
-                                    <div class="contact__input-wrapper mb-25">
-                                       <h5>Message</h5>
-                                       <div class="contact__input textarea">
-                                          <textarea placeholder="Tell us a bil about your project" name="message"></textarea>
-                                          <i class="fal fa-comment"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-xxl-12">
-                                    <button type="submit" class="m-btn m-btn-4"> <span></span> submit </button>
-                                 </div>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
+                  <div class="mt-2">
+                    <a class="btn btn-lg bg-gradient-info btn-lg mt-2 mb-0" href="{{route('admin.blog.create')}}">Tambah Blog</a>
                   </div>
-                  <div class="col-xxl-5 col-xl-5">
-                     <div class="contact__map">
-                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.4800810528923!2d90.36797221544877!3d23.837080434546706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14a3366b005%3A0x901b07016468944c!2z4Kau4Ka_4Kaw4Kaq4KeB4KawIOCmoeCmvyzgppMs4KaP4KaH4KaaLOCmj-CmuCwg4Kai4Ka-4KaV4Ka-!5e0!3m2!1sbn!2sbd!4v1615723408957!5m2!1sbn!2sbd"></iframe>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- contact area end -->
                 </div>
+                <div class="card-body px-0 pb-2">
+                  <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0">
+                      <thead>
+                        <tr>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Author</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Function</th>
+                          <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                          <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Employed</th>
+                          <th class="text-secondary opacity-7"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2 py-1">
+                              <div>
+                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                              </div>
+                              <div class="d-flex flex-column justify-content-center">
+                                <h6 class="mb-0 text-sm">John Michael</h6>
+                                <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-xs font-weight-bold mb-0">Manager</p>
+                            <p class="text-xs text-secondary mb-0">Organization</p>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                            <span class="badge badge-sm bg-gradient-success">Online</span>
+                          </td>
+                          <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                          </td>
+                          <td class="align-middle">
+                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2 py-1">
+                              <div>
+                                <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user2">
+                              </div>
+                              <div class="d-flex flex-column justify-content-center">
+                                <h6 class="mb-0 text-sm">Alexa Liras</h6>
+                                <p class="text-xs text-secondary mb-0">alexa@creative-tim.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-xs font-weight-bold mb-0">Programator</p>
+                            <p class="text-xs text-secondary mb-0">Developer</p>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                            <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                          </td>
+                          <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
+                          </td>
+                          <td class="align-middle">
+                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2 py-1">
+                              <div>
+                                <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user3">
+                              </div>
+                              <div class="d-flex flex-column justify-content-center">
+                                <h6 class="mb-0 text-sm">Laurent Perrier</h6>
+                                <p class="text-xs text-secondary mb-0">laurent@creative-tim.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-xs font-weight-bold mb-0">Executive</p>
+                            <p class="text-xs text-secondary mb-0">Projects</p>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                            <span class="badge badge-sm bg-gradient-success">Online</span>
+                          </td>
+                          <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
+                          </td>
+                          <td class="align-middle">
+                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2 py-1">
+                              <div>
+                                <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user4">
+                              </div>
+                              <div class="d-flex flex-column justify-content-center">
+                                <h6 class="mb-0 text-sm">Michael Levi</h6>
+                                <p class="text-xs text-secondary mb-0">michael@creative-tim.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-xs font-weight-bold mb-0">Programator</p>
+                            <p class="text-xs text-secondary mb-0">Developer</p>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                            <span class="badge badge-sm bg-gradient-success">Online</span>
+                          </td>
+                          <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
+                          </td>
+                          <td class="align-middle">
+                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2 py-1">
+                              <div>
+                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user5">
+                              </div>
+                              <div class="d-flex flex-column justify-content-center">
+                                <h6 class="mb-0 text-sm">Richard Gran</h6>
+                                <p class="text-xs text-secondary mb-0">richard@creative-tim.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-xs font-weight-bold mb-0">Manager</p>
+                            <p class="text-xs text-secondary mb-0">Executive</p>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                            <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                          </td>
+                          <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
+                          </td>
+                          <td class="align-middle">
+                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="d-flex px-2 py-1">
+                              <div>
+                                <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user6">
+                              </div>
+                              <div class="d-flex flex-column justify-content-center">
+                                <h6 class="mb-0 text-sm">Miriam Eric</h6>
+                                <p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-xs font-weight-bold mb-0">Programator</p>
+                            <p class="text-xs text-secondary mb-0">Developer</p>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                            <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                          </td>
+                          <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
+                          </td>
+                          <td class="align-middle">
+                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                              Edit
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
+          </div>
+
 </x-app-layout>
 

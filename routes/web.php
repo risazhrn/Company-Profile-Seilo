@@ -21,9 +21,6 @@ Route::get('/', function () {
 Route::get('/blog', function(){
     return view('blog.index');
 })->name('blog');
-Route::get('/blog/create', function(){
-    return view('blog.create');
-})->name('blog.create');
 Route::get('/about', function(){
     return view('about-us');
 })->name('about');
@@ -43,6 +40,26 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/blog', function() {
         return view('admin.blog.index');
     })->name('admin.blog');
+    Route::get('/admin/blog/add', function() {
+        return view('admin.blog.create');
+    })->name('admin.blog.create');
+    Route::get('/admin/blog/edit', function() {
+        return view('admin.blog.edit');
+    })->name('admin.blog.create');
+
+    Route::get('/admin/program', function() {
+        return view('admin.program.index');
+    })->name('admin.program');
+    Route::get('/admin/program/add', function() {
+        return view('admin.program.create');
+    })->name('admin.program.create');
+    Route::get('/admin/program/edit', function() {
+        return view('admin.program.edit');
+    })->name('admin.program.create');
+
+    Route::get('/admin/users', function() {
+        return view('admin.user.index');
+    })->name('admin.users');
 });
 
 require __DIR__.'/auth.php';
