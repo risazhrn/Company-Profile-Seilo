@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,15 +38,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/admin/blog', function() {
-        return view('admin.blog.index');
-    })->name('admin.blog');
+    Route::get('/admin/blog', [BlogController::class, 'index'])->name('admin.blog');
     Route::get('/admin/blog/add', function() {
         return view('admin.blog.create');
     })->name('admin.blog.create');
     Route::get('/admin/blog/edit', function() {
         return view('admin.blog.edit');
     })->name('admin.blog.create');
+    Route::post('/admin/blog', [BlogController::class, 'store'])->name('admin.blog.store');
 
     Route::get('/admin/program', function() {
         return view('admin.program.index');
