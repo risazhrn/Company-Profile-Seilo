@@ -40,7 +40,7 @@
                             @forelse ($blogs as $blog)
                                 <article class="postbox__item format-image fix mb-50 wow fadeInUp" data-wow-delay=".2s">
                                     <div class="postbox__thumb">
-                                        <a href="blog-details.html" class="w-img">
+                                        <a href="{{ route('blog.detail', $blog->slug) }}" class="w-img">
                                             <img src="{{ asset($blog->media->path) }}" alt="">
                                         </a>
                                     </div>
@@ -82,7 +82,7 @@
                                 <div class="sidebar__widget mb-30">
                                     <div class="sidebar__widget-content">
                                         <div class="sidebar__search-wrapper">
-                                            <form action="{{ route('blog') }}">
+                                            <form action="{{ route('blog.index') }}">
                                                 <input type="text" placeholder="Search ..." name='s'
                                                     value="{{ request()->s }}">
                                                 <button type="submit"><i class="fal fa-search"></i></button>
@@ -99,15 +99,17 @@
                                             @forelse ($recentNews as $rn)
                                                 <div class="rc__post d-flex align-items-center">
                                                     <div class="rc__thumb mr-15">
-                                                        <a href="#"><img src="{{ asset($rn->media->path) }}"
-                                                                alt="" width="50"></a>
+                                                        <a href="{{ route('blog.detail', $rn->slug) }}"><img
+                                                                src="{{ asset($rn->media->path) }}" alt=""
+                                                                width="50"></a>
                                                     </div>
                                                     <div class="rc__content">
                                                         <div class="rc__meta">
                                                             <span>{{ $rn->created_at->diffForHumans() }}</span>
                                                         </div>
                                                         <h6 class="rc__title"><a
-                                                                href="blog-details.html">{{ $rn->judul }}</a></h6>
+                                                                href="{{ route('blog.detail', $rn->slug) }}">{{ $rn->judul }}</a>
+                                                        </h6>
                                                     </div>
                                                 </div>
                                             @empty
@@ -115,41 +117,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="sidebar__widget mb-30">
-                                    <div class="sidebar__widget-title">
-                                        <h3>Categories</h3>
-                                    </div>
-                                    <div class="sidebar__widget-content">
-                                        <div class="sidebar__catagory">
-                                            <ul>
-                                                <li><a href="blog.html">Web Design (6)</a></li>
-                                                <li><a href="blog.html"> Web Development (14)</a></li>
-                                                <li><a href="blog.html">Graphics (12)</a></li>
-                                                <li><a href="blog.html">IOS/Android Design (10)</a></li>
-                                                <li><a href="blog.html">App & Saas (4)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sidebar__widget">
-                                    <div class="sidebar__widget-title">
-                                        <h3>Popular Tags</h3>
-                                    </div>
-                                    <div class="sidebar__widget-content">
-                                        <div class="tags">
-                                            <a href="#">Business</a>
-                                            <a href="#">Landing</a>
-                                            <a href="#">Design</a>
-                                            <a href="#">Digital</a>
-                                            <a href="#">Technology</a>
-                                            <a href="#">UI/UX</a>
-                                            <a href="#">Features</a>
-                                            <a href="#">Pix Saas Blog</a>
-                                        </div>
-                                    </div>
-                                </div> --}}
                             </div>
-
                         </div>
                     </div>
                 </div>

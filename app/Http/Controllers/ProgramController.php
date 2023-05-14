@@ -3,34 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Blog;
 use App\Models\Media;
+use App\Models\Program;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
-class BlogController extends Controller
+class ProgramController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $search = $request->s;
-        $blogs = Blog::query();
-        if (isset($search)) {
-            $blogs = $blogs->where('judul', 'LIKE', "%$search%");
-        }
-        $blogs = $blogs->orderBy('created_at', 'desc')->paginate(5);
-        $recentNews = Blog::orderBy('created_at', 'desc')->limit(3)->get();
-        return view('blog.index', compact('blogs', 'recentNews'));
+        $programs = Program::query()->orderBy('created_at', 'desc')->paginate(10);
+        return view('program.index', compact('programs'));
     }
 
     public function indexAdmin()
     {
-        $blogs = Blog::all();
-        return view('admin.blog.index', compact('blogs'));
+        $programs = Program::all();
+        return view('admin.program.index', compact('programs'));
     }
 
     /**
@@ -38,7 +31,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.create');
+        return view('admin.program.create');
     }
 
     /**
@@ -47,9 +40,11 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'isi' => 'required',
             'gambar' => 'required|image|max:2000|',
             'judul' => 'required',
+            'deskripsi' => 'required',
+            'tgl_dibuka' => 'required|date',
+            'tgl_ditutup' => 'required|date|after_or_equal:tgl_dibuka',
         ]);
 
         DB::beginTransaction();
@@ -65,27 +60,29 @@ class BlogController extends Controller
             ]);
         }
         try {
-            Blog::create([
+            Program::create([
                 'judul' => $request->judul,
-                'slug' => Str::slug($request->judul) . '-' . rand(100, 999),
-                'isi' => $request->isi,
+                'deskripsi' => $request->deskripsi,
                 'user_id' => Auth::id(),
                 'media_id' => $media->id,
+                'tgl_dibuka' => $request->tgl_dibuka,
+                'tgl_ditutup' => $request->tgl_ditutup,
             ]);
             DB::commit();
-            return to_route('admin.blog.index')->with('success', 'Berhasil menambahkan postingan blog.');
+            return to_route('admin.program.index')->with('success', 'Berhasil menambahkan program.');
         } catch (\Exception $e) {
             DB::rollback();
-            return to_route('admin.blog.index')->with('fail', 'Gagal menambahkan postingan blog!');
+            return to_route('admin.program.index')->with('fail', 'Gagal menambahkan program!');
         }
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Blog $blog)
+    public function show(string $id)
     {
-        return view('blog.detail', compact('blog'));
+        //
     }
 
     /**

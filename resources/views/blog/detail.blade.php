@@ -1,5 +1,7 @@
 <x-guest-layout>
-    <x-slot name="title"></x-slot>
+    <x-slot name="title">
+        {{ $blog->judul }}
+    </x-slot>
     <!-- bg shape area start -->
     <div class="bg-shape">
         <img src="{{ asset('img/shape/shape-1.png') }}" alt="">
@@ -12,7 +14,7 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="page__title-content mb-50">
-                        <div class="postbox__meta d-flex">
+                        {{-- <div class="postbox__meta d-flex">
                             <div class="postbox__tag-2">
                                 <a href="#">Digital,</a>
                                 <a href="#">Marketing. </a>
@@ -20,8 +22,8 @@
                             <div class="postbox__time">
                                 <span>4 min read</span>
                             </div>
-                        </div>
-                        <h2 class="page__title">Why we decide to build a collaborative UX design tools platform?</h2>
+                        </div> --}}
+                        <h2 class="page__title">{{ $blog->judul }}</h2>
                         <div class="postbox__author-2 mt-20">
                             <ul class="d-flex align-items-center">
                                 <li>
@@ -30,17 +32,17 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <h6><a href="#">Justin Case</a></h6>
+                                    <h6><a href="#">{{ $blog->penulis->name }}</a></h6>
                                     <span><a href="#">View Profile</a></span>
                                 </li>
                                 <li>
-                                    <h6>July 5, 2019 </h6>
+                                    <h6>{{ $blog->created_at->diffForHumans() }}</h6>
                                     <span>Published</span>
                                 </li>
-                                <li class="d-none d-sm-block">
+                                {{-- <li class="d-none d-sm-block">
                                     <h6>Join the Conversation </h6>
                                     <span>2 comments</span>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -57,50 +59,23 @@
                 <div class="col-xxl-8 col-xl-8 col-lg-8">
                     <div class="postbox__wrapper">
                         <div class="postbox__thumb postbox__thumb-2 fix w-img mb-30">
-                            <a href="#"><img src="{{ asset('img/blog/big/blog-big-1.jpg') }}" alt=""></a>
+                            <a href="#"><img src="{{ asset($blog->media->path) }}" alt=""></a>
                         </div>
                         <div class="postbox__details mb-30">
-                            <p class="drop-cap">Here’s a scenario — you’re participating in a user test for your
-                                favorite music app. At the end of the day, design is the manipulation of stimuli and
-                                information, so working with the stimuli.</p>
-                            <p>Get stuffed mate David James Bond bleeder mush amongst bodge haggle Oxford, cup of char
-                                is faff about ummm I'm <span class="highlight"><a href="about.html">telling only a quid
-                                        wellies</a></span> my lady pear shaped up the kyver, I hunky-dory some dodgy
-                                chav I don't want no agro a codswallop he legged it. Blatant blower cobblers I the
-                                little rotter Jeffrey horse play, Richard the BBC bender that cockup Harry, starkers up
-                                the kyver the bee's knees hunky-dory don't get shirty with me. Owt to do with me chap
-                                the little rotter cras starkers bugger all mate bleeder horse play David he nicked it,
-                                James Bond smashing mufty bonnet haggle Oxford knackered fanny around bog a, boot cuppa
-                                blower I don't want no agro <span class="highlight"><a href="about.html">Eaton lost the
-                                        plot</a> </span> sloshed ummm I'm telling. Hanky panky Harry burke butty Charles
-                                amongst tosser you mug, lemon squeezy <span class="highlight"><a
-                                        href="about.html">wellies cheesed off quaint</a></span> pardon you old wind up
-                                bevvy, bugger all mate Oxford bonnet fanny around mush smashing. Cracking goal pukka
-                                what a load of rubbish a load of old tosh sloshed that Eaton James Bond, cor blimey
-                                guvnor the full monty chinwag bamboozled matie boy tinkety tonk old fruit Jeffrey
-                                hunky-dory, say the BBC brown bread dropped a clanger happy days the bee's knees. Posh
-                                vagabond he legged it is lurgy knees up Elizabeth so I said only a quid, say smashing
-                                victoria sponge zonked grub bum bag matie boy my good sir.
-                            </p>
+                            {!! $blog->isi !!}
                         </div>
-                        <div class="postbox__details mb-30">
-                            <h4>Words that make design go round</h4>
-                            <p>Blow off grub get stuffed mate I knackered what a load of rubbish twit, chinwag up the
-                                duff a load of old tosh bobby brolly mush, spiffing good time bender porkies ruddy
-                                bleeder. Don't get shirt with me hanky panky happy days brilliant bevvy ummm I'm telling
-                                a do one Why codswallop haggle, arse over tit lurgy car boot tinketygoal.!</p>
-                        </div>
-                        <div class="postbox__quote-2 mb-50">
+
+                        {{-- <div class="postbox__quote-2 mb-50">
                             <blockquote>
                                 <h4>“Even if we can go very far in the detail of the user experience terms of design, a
                                     bad copy can completely” </h4>
                                 <span>Sophie Ianiro</span>
                             </blockquote>
-                        </div>
-                        <div class="postbox__thumb postbox__thumb-2 fix w-img mb-30">
+                        </div> --}}
+                        {{-- <div class="postbox__thumb postbox__thumb-2 fix w-img mb-30">
                             <img src="{{ asset('img/blog/blog-2.jpg') }}" alt="">
-                        </div>
-                        <div class="postbox__details mb-30">
+                        </div> --}}
+                        {{-- <div class="postbox__details mb-30">
                             <p>Owt to do with me chap the little rotter cras starkers bugger all mate bleeder horse play
                                 David he nicked it, James Bond smashing mufty bonnet haggle Oxford knackered fanny
                                 around bog a, boot cuppa blower I don't want no agro Eaton lost the plot sloshed ummm
@@ -108,8 +83,8 @@
                                     class="highlight"><a href="about.html">lemon squeezy wellies cheesed</a></span> off
                                 quaint pardon you old wind up bevvy, bugger all mate Oxford bonnet fanny around mush
                                 smashing. Cracking goal pukka what a load of rubbish a load</p>
-                        </div>
-                        <div class="postbox__details mb-45">
+                        </div> --}}
+                        {{-- <div class="postbox__details mb-45">
                             <h4>Introducing the new Markit</h4>
 
                             <div class="postbox__list">
@@ -121,14 +96,14 @@
                                     <li>Plus many more channels…</li>
                                 </ol>
                             </div>
-                        </div>
-                        <div class="postbox__tag postbox__tag-3 d-sm-flex mb-25">
+                        </div> --}}
+                        {{-- <div class="postbox__tag postbox__tag-3 d-sm-flex mb-25">
                             <h5>Tagged with:</h5>
                             <a href="#">Business</a>
                             <a href="#">Landing</a>
                             <a href="#">Design</a>
                             <a href="#">UI/UX</a>
-                        </div>
+                        </div> --}}
                         <div class="postbox__share m-social mb-80">
                             <h5>The share</h5>
                             <ul>
@@ -138,20 +113,21 @@
                                 <li><a href="#" class="link"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
-                        <div class="postbox__author-3 d-sm-flex grey-bg-2 mb-85">
+                        {{-- <div class="postbox__author-3 d-sm-flex grey-bg-2 mb-85">
                             <div class="postbox__author-thumb-3 mr-20">
                                 <img src="{{ asset('img/blog/author/blog-author-5.jpg') }}" alt="">
                             </div>
                             <div class="postbox__author-content">
-                                <h4>Justin Case</h4>
+                                <h4>{{ $blog->penulis->name }}</h4>
                                 <p>James Bond cheers barney the little rotter I don't want no agro gutted mate
                                     smashing cheeky pear shaped, mufty super.</p>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="postbox__recent mb-60">
                             <h4>Recent Posts</h4>
 
                             <div class="row">
+
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                     <div class="blog__single-2 white-bg mb-30">
                                         <div class="blog__thumb-2 w-img mb-20">
@@ -177,6 +153,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                     <div class="blog__single-2 white-bg mb-30">
                                         <div class="blog__thumb-2 w-img mb-20">
@@ -202,17 +179,17 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
-                        <div class="latest-comments mb-55">
+                        {{-- <div class="latest-comments mb-55">
                             <h3>2 Comments</h3>
                             <ul>
                                 <li>
                                     <div class="comments-box grey-bg-2">
                                         <div class="comments-info d-flex">
                                             <div class="comments-avatar mr-15">
-                                                <img src="{{ asset('img/product/support/sup-1.jpg') }}"
-                                                    alt="">
+                                                <img src="{{ asset('img/product/support/sup-1.jpg') }}" alt="">
                                             </div>
                                             <div class="avatar-name">
                                                 <h5>Jason Response</h5>
@@ -232,8 +209,7 @@
                                     <div class="comments-box grey-bg-2">
                                         <div class="comments-info d-flex">
                                             <div class="comments-avatar mr-15">
-                                                <img src="{{ asset('img/product/support/sup-2.jpg') }}"
-                                                    alt="">
+                                                <img src="{{ asset('img/product/support/sup-2.jpg') }}" alt="">
                                             </div>
                                             <div class="avatar-name">
                                                 <h5>Hilary Ouse</h5>
@@ -250,8 +226,8 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="comment__wrapper p-relative white-bg">
+                        </div> --}}
+                        {{-- <div class="comment__wrapper p-relative white-bg">
                             <div class="comment__shape">
                                 <img class="circle" src="{{ asset('img/icon/sign/circle.png') }}" alt="">
                                 <img class="zigzag" src="{{ asset('img/icon/sign/zigzag.png') }}" alt="">
@@ -320,7 +296,7 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4">
@@ -421,10 +397,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sidebar__banner" data-background="{{ asset('img/banner/sidebar-banner.jpg') }}">
+                        {{-- <div class="sidebar__banner" data-background="{{ asset('img/banner/sidebar-banner.jpg') }}">
                             <h4 class="sidebar__banner-title">Check Out <br>Our free Templates</h4>
                             <a href="product.html" class="m-btn m-btn-white"> <span></span> free template</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

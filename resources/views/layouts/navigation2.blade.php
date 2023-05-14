@@ -6,7 +6,7 @@
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                     <div class="logo">
                         <a href="/">
-                            <img src="{{asset('img/logo/Logo Seilo.png')}}" alt="logo">
+                            <img src="{{ asset('img/logo/Logo Seilo.png') }}" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -19,11 +19,11 @@
                                 <li class="{{ request()->routeIs('about') ? 'active' : '' }}"><a
                                         href="{{ route('about') }}">About Us</a></li>
 
-                                <li class="{{ request()->routeIs('blog') ? 'active' : '' }}"><a
-                                        href="{{ route('blog') }}">Blog</a>
+                                <li class="{{ request()->routeIs('blog.index', 'blog.detail') ? 'active' : '' }}"><a
+                                        href="{{ route('blog.index') }}">Blog</a>
                                 </li>
-                                <li class="{{ request()->routeIs('program') ? 'active' : '' }}"><a
-                                        href="{{ route('program') }}">Program</a></li>
+                                <li class="{{ request()->routeIs('program.index') ? 'active' : '' }}"><a
+                                        href="{{ route('program.index') }}">Program</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -82,7 +82,7 @@
                     <li>
                         <div class="cartmini__thumb">
                             <a href="product-details.html">
-                                <img src="{{asset('img/product/sm/cart-5.jpg')}}" alt="">
+                                <img src="{{ asset('img/product/sm/cart-5.jpg') }}" alt="">
                             </a>
                         </div>
                         <div class="cartmini__content">
@@ -102,7 +102,7 @@
                     <li>
                         <div class="cartmini__thumb">
                             <a href="product-details.html">
-                                <img src="{{asset('img/product/sm/cart-2.jpg')}}" alt="">
+                                <img src="{{ asset('img/product/sm/cart-2.jpg') }}" alt="">
                             </a>
                         </div>
                         <div class="cartmini__content">
@@ -122,7 +122,7 @@
                     <li>
                         <div class="cartmini__thumb">
                             <a href="product-details.html">
-                                <img src="{{asset('img/product/sm/cart-3.jpg')}}" alt="">
+                                <img src="{{ asset('img/product/sm/cart-3.jpg') }}" alt="">
                             </a>
                         </div>
                         <div class="cartmini__content">
@@ -168,7 +168,7 @@
         <div class="sidebar__content">
             <div class="logo mb-40">
                 <a href="index.html">
-                    <img src="{{asset('img/logo/logo-white.png')}}" alt="logo">
+                    <img src="{{ asset('img/logo/logo-white.png') }}" alt="logo">
                 </a>
             </div>
             <div class="mobile-menu"></div>
