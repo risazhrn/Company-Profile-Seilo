@@ -8,12 +8,12 @@
         <!-- hero area start -->
         <section class="hero__area hero__height grey-bg-3 d-flex align-items-center">
             <div class="hero__shape">
-                <img class="circle" src="{{asset('img/icon/hero/hero-circle.png')}}" alt="circle">
-                <img class="circle-2" src="{{asset('img/icon/hero/hero-circle-2.png')}}" alt="circle">
-                <img class="square" src="{{asset('img/icon/hero/hero-square.png')}}" alt="circle">
-                <img class="square-2" src="{{asset('img/icon/hero/hero-square-2.png')}}" alt="circle">
-                <img class="dot" src="{{asset('img/icon/hero/hero-dot.png')}}" alt="circle">
-                <img class="triangle" src="{{asset('img/icon/hero/hero-triangle.png')}}" alt="circle">
+                <img class="circle" src="{{ asset('img/icon/hero/hero-circle.png') }}" alt="circle">
+                <img class="circle-2" src="{{ asset('img/icon/hero/hero-circle-2.png') }}" alt="circle">
+                <img class="square" src="{{ asset('img/icon/hero/hero-square.png') }}" alt="circle">
+                <img class="square-2" src="{{ asset('img/icon/hero/hero-square-2.png') }}" alt="circle">
+                <img class="dot" src="{{ asset('img/icon/hero/hero-dot.png') }}" alt="circle">
+                <img class="triangle" src="{{ asset('img/icon/hero/hero-triangle.png') }}" alt="circle">
             </div>
             <div class="container">
                 <div class="row">
@@ -40,13 +40,16 @@
                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                         <div class="hero__thumb-wrapper scene ml-70">
                             <div class="hero__thumb one d-none d-lg-block">
-                                <img class="layer" data-depth="0.2" src="{{asset('img/hero/hero-1.jpg')}}" alt="">
+                                <img class="layer" data-depth="0.2" src="{{ asset('img/hero/hero-1.jpg') }}"
+                                    alt="">
                             </div>
                             <div class="hero__thumb two">
-                                <img class="layer" data-depth="0.3" src="{{asset('img/hero/hero-2.jpg')}}" alt="">
+                                <img class="layer" data-depth="0.3" src="{{ asset('img/hero/hero-2.jpg') }}"
+                                    alt="">
                             </div>
                             <div class="hero__thumb three">
-                                <img class="layer" data-depth="0.4" src="{{asset('img/hero/hero-3.jpg')}}" alt="">
+                                <img class="layer" data-depth="0.4" src="{{ asset('img/hero/hero-3.jpg') }}"
+                                    alt="">
                             </div>
                         </div>
                     </div>
@@ -67,116 +70,51 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="product__thumb">
-                                <div class="product__thumb-inner fix w-img">
-                                    <a href="product-details.html">
-                                        <img src="{{asset('img/product/product-1.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
-                                        Buy Now
-                                    </a>
-                                    <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
-                                        target="_blank" class="m-btn m-btn-7">
-                                        Preview Project
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product__content">
-                                <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
-                                    <div class="product__tag">
-                                        <a href="#">Business</a>
+                    @forelse ($programs as $program)
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                            <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="product__thumb">
+                                    <div class="product__thumb-inner fix w-img">
+                                        <a href="product-details.html">
+                                            <img src="{{ asset($program->media->path) }}" alt="">
+                                        </a>
                                     </div>
-                                    <div class="product__price">
-                                        <span>$49</span>
+                                    <div class="product__thumb-btn transition-3">
+                                        {{-- <a href="#" class="m-btn m-btn-6 mb-15">
+                                            Buy Now
+                                        </a> --}}
+                                        <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                            target="_blank" class="m-btn m-btn-7">
+                                            Lihat Program
+                                        </a>
                                     </div>
                                 </div>
-                                <h3 class="product__title">
-                                    <a href="product-details.html">Zibber - Business Consulting...</a>
-                                </h3>
-                                <p class="product__author">by <a href="#">Theme Pure</a> in <a
-                                        href="#">Templates</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".5s">
-                            <div class="product__thumb">
-                                <div class="product__thumb-inner fix w-img">
-                                    <a href="product-details.html">
-                                        <img src="{{asset('img/product/product-2.jpg')}}" alt="">
-                                    </a>
+                                <div class="product__content">
+                                    {{-- <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__tag">
+                                            <a href="#">Business</a>
+                                        </div>
+                                        <div class="product__price">
+                                            <span>$49</span>
+                                        </div>
+                                    </div> --}}
+                                    <h3 class="product__title">
+                                        <a href="product-details.html">{{ $program->judul }}</a>
+                                    </h3>
+                                    <p class="product__author">by <a href="#">{{ $program->pembuat->name }}</a>
+                                    </p>
                                 </div>
-                                <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
-                                        Buy Now
-                                    </a>
-                                    <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
-                                        target="_blank" class="m-btn m-btn-7">
-                                        Preview Project
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product__content">
-                                <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
-                                    <div class="product__tag">
-                                        <a href="product-details.html">corporate</a>
-                                    </div>
-                                    <div class="product__price">
-                                        <span>$23</span>
-                                    </div>
-                                </div>
-                                <h3 class="product__title">
-                                    <a href="product-details.html">Pixen - Printing Services Company..</a>
-                                </h3>
-                                <p class="product__author">by <a href="#">Theme Pure</a> in <a
-                                        href="#">Templates</a></p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".7s">
-                            <div class="product__thumb">
-                                <div class="product__thumb-inner fix w-img">
-                                    <a href="product-details.html">
-                                        <img src="{{asset('img/product/product-3.jpg')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
-                                        Buy Now
-                                    </a>
-                                    <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
-                                        target="_blank" class="m-btn m-btn-7">
-                                        Preview Project
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="product__content">
-                                <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
-                                    <div class="product__tag">
-                                        <a href="#">listing</a>
-                                    </div>
-                                    <div class="product__price">
-                                        <span>$12</span>
-                                    </div>
-                                </div>
-                                <h3 class="product__title">
-                                    <a href="product-details.html">Findup - Directory & Listing PSD...</a>
-                                </h3>
-                                <p class="product__author">by <a href="#">Theme Pure</a> in <a
-                                        href="#">Templates</a></p>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                    @endforelse
+
                 </div>
                 <div class="row">
                     <div class="col-xxl-12">
                         <div class="product__more text-center mt-30">
-                            <a href="product.html" class="m-btn m-btn-2"> <span></span> More Program</a>
+                            <a href="{{ route('program.index') }}" class="m-btn m-btn-2"> <span></span> More
+                                Program</a>
                         </div>
                     </div>
                 </div>
@@ -626,14 +564,14 @@
                     <div class="col-xxl-12">
                         <div class="testimonial__wrapper p-relative pb-135 wow fadeInUp" data-wow-delay=".5s">
                             <div class="testimonial__shape">
-                                <img src="{{asset('img/testimonial/testimonial-shape.png')}}" alt="">
+                                <img src="{{ asset('img/testimonial/testimonial-shape.png') }}" alt="">
                             </div>
                             <div class="testimonial__slider-2 owl-carousel">
                                 <div class="testimonial__item-2">
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="{{asset('img/testimonial/testi-1.jpg')}}" alt="">
+                                                <img src="{{ asset('img/testimonial/testi-1.jpg') }}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Justin Case</h5>
@@ -659,7 +597,7 @@
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
+                                                <img src="{{ asset('img/testimonial/testi-2.jpg') }}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Gunther Beard</h5>
@@ -685,7 +623,7 @@
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="{{asset('img/testimonial/testi-3.jpg')}}" alt="">
+                                                <img src="{{ asset('img/testimonial/testi-3.jpg') }}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Shahnewaz Sakil</h5>
@@ -711,7 +649,7 @@
                                     <div class="testimonial__person-wrapper">
                                         <div class="testimonial__person d-flex">
                                             <div class="testimonial__avater">
-                                                <img src="{{asset('img/testimonial/testi-4.jpg')}}" alt="">
+                                                <img src="{{ asset('img/testimonial/testi-4.jpg') }}" alt="">
                                             </div>
                                             <div class="testimonial__info ml-15">
                                                 <h5>Shamiha Islam</h5>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
+use App\Models\Program;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,8 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    return view('homepage');
+    $programs = Program::limit(3)->get();
+    return view('homepage', compact('programs'));
 })->name('home');
 
 Route::prefix('blog')->name('blog.')->controller(BlogController::class)->group(function () {
