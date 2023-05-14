@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Media;
 use App\Models\Blog;
+use App\Models\Media;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
@@ -13,13 +13,21 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
+    {
+        $search = $request->s;
+        $blogs = Blog::query();
+        if (isset($search)) {
+            $blogs = $blogs->where('judul', 'LIKE', "%$search%");
+        }
+        $blogs = $blogs->paginate(5);
+        $recentNews = Blog::orderBy('created_at', 'asc')->limit(3)->get();
+        return view('blog.index', compact('blogs', 'recentNews'));
+    }
+
+    public function indexAdmin()
     {
         $blogs = Blog::all();
-        // if () {
-
-        // }
-        // dd($blogs);
         return view('admin.blog.index', compact('blogs'));
     }
 
@@ -28,7 +36,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.blog.create');
     }
 
     /**
@@ -38,8 +46,8 @@ class BlogController extends Controller
     {
         $request->validate([
             'isi' => 'required',
-            'gambar' => 'required|image',
-            'judul' => 'required'
+            'gambar' => 'required|image|max:2000|',
+            'judul' => 'required',
         ]);
 
         // dd($request->gambar->getSize());
@@ -50,7 +58,7 @@ class BlogController extends Controller
                 'name' => $file->getClientOriginalName(),
                 'type' => $file->getMimeType(),
                 'size' => $file->getSize(),
-                'path' => $path
+                'path' => $path,
             ]);
         }
 
@@ -68,9 +76,9 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        //
+        return view('blog.detail');
     }
 
     /**

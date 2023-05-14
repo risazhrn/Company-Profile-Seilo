@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,19 +13,21 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('homepage');
 })->name('home');
 
-Route::get('/blog', function(){
-    return view('blog.index');
-})->name('blog');
-Route::get('/about', function(){
+Route::prefix('blog')->controller(BlogController::class)->group(function () {
+    Route::get('/', 'index')->name('blog');
+    Route::get('/{slug}', 'show')->name('blog.detail');
+});
+
+Route::get('/about', function () {
     return view('about-us');
 })->name('about');
-Route::get('/program', function(){
+Route::get('/program', function () {
     return view('program');
 })->name('program');
 
@@ -38,28 +40,27 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/admin/blog', [BlogController::class, 'index'])->name('admin.blog');
-    Route::get('/admin/blog/add', function() {
-        return view('admin.blog.create');
-    })->name('admin.blog.create');
-    Route::get('/admin/blog/edit', function() {
-        return view('admin.blog.edit');
-    })->name('admin.blog.create');
-    Route::post('/admin/blog', [BlogController::class, 'store'])->name('admin.blog.store');
+    Route::prefix('admin')->group(function () {
+        Route::prefix('blog')->controller(BlogController::class)->group(function () {
+            Route::get('/', 'indexAdmin')->name('admin.blog');
+            Route::get('/add', 'create')->name('admin.blog.create');
+            Route::post('/', 'store')->name('admin.blog.store');
+        });
 
-    Route::get('/admin/program', function() {
-        return view('admin.program.index');
-    })->name('admin.program');
-    Route::get('/admin/program/add', function() {
-        return view('admin.program.create');
-    })->name('admin.program.create');
-    Route::get('/admin/program/edit', function() {
-        return view('admin.program.edit');
-    })->name('admin.program.create');
+        Route::get('/program', function () {
+            return view('admin.program.index');
+        })->name('admin.program');
+        Route::get('/program/add', function () {
+            return view('admin.program.create');
+        })->name('admin.program.create');
+        Route::get('/program/edit', function () {
+            return view('admin.program.edit');
+        })->name('admin.program.create');
 
-    Route::get('/admin/users', function() {
-        return view('admin.user.index');
-    })->name('admin.users');
+        Route::get('/users', function () {
+            return view('admin.user.index');
+        })->name('admin.users');
+    });
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

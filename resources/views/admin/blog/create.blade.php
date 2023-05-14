@@ -1,123 +1,60 @@
 <x-app-layout>
-    <x-slot name="title">Create Blog</x-slot>
-
+    <x-slot name="title">Tambah Blog</x-slot>
     <div class="container-fluid py-4">
         <div class="mx-3 mx-md-4">
             <div class="card card-body">
-                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <div
+                    class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 d-flex justify-content-between align-items-center">
                     <h6 class="text-white text-capitalize ps-3">Tambah Blog</h6>
-                  </div>
+                    <a class="btn btn-lg bg-gradient-info btn-lg my-0 me-3" href="{{ route('admin.blog') }}">Kembali</a>
+                </div>
 
-                <form role="form" class="m-4">
+                <form role="form" action="{{ route('admin.blog.store') }}" class="m-4" method="POST"
+                    enctype="multipart/form-data">
+                    @csrf
+
                     <div class="form-group mb-3">
                         <label for="gambarInput">Pilih Gambar : </label>
-                        <input type="file" class="form-control-file" id="gambarInput" aria-describedby="gambarHelp" accept="image/*">
-                        <small id="gambarHelp" class="form-text text-muted">Format gambar yang diperbolehkan: JPG, PNG.</small>
-                      </div>
-                    <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Title</label>
-                      <input type="text" class="form-control">
+                        <input name="gambar" type="file" class="form-control-file" id="gambarInput"
+                            aria-describedby="gambarHelp" accept="image/*">
+                        <small id="gambarHelp" class="form-text text-muted">Format gambar yang diperbolehkan: JPG,
+                            PNG.</small>
+                        <x-input-error :messages="$errors->get('gambar')" class="mt-2" />
                     </div>
                     <div class="input-group input-group-outline mb-3">
-                      {{-- <label class="form-label">Deksripsi Konten</label>
-                      <input type="text" class="form-control"> --}}
-                      <div class="container">
-                        <div class="options">
-                          <!-- Text Format -->
-                          <button id="bold" class="option-button format">
-                            <i class="fa-solid fa-bold"></i>
-                          </button>
-                          <button id="italic" class="option-button format">
-                            <i class="fa-solid fa-italic"></i>
-                          </button>
-                          <button id="underline" class="option-button format">
-                            <i class="fa-solid fa-underline"></i>
-                          </button>
-                          <button id="strikethrough" class="option-button format">
-                            <i class="fa-solid fa-strikethrough"></i>
-                          </button>
-                          <button id="superscript" class="option-button script">
-                            <i class="fa-solid fa-superscript"></i>
-                          </button>
-                          <button id="subscript" class="option-button script">
-                            <i class="fa-solid fa-subscript"></i>
-                          </button>
-                          <!-- List -->
-                          <button id="insertOrderedList" class="option-button">
-                            <div class="fa-solid fa-list-ol"></div>
-                          </button>
-                          <button id="insertUnorderedList" class="option-button">
-                            <i class="fa-solid fa-list"></i>
-                          </button>
-                          <!-- Undo/Redo -->
-                          <button id="undo" class="option-button">
-                            <i class="fa-solid fa-rotate-left"></i>
-                          </button>
-                          <button id="redo" class="option-button">
-                            <i class="fa-solid fa-rotate-right"></i>
-                          </button>
-                          <!-- Link -->
-                          <button id="createLink" class="adv-option-button">
-                            <i class="fa fa-link"></i>
-                          </button>
-                          <button id="unlink" class="option-button">
-                            <i class="fa fa-unlink"></i>
-                          </button>
-                          <!-- Alignment -->
-                          <button id="justifyLeft" class="option-button align">
-                            <i class="fa-solid fa-align-left"></i>
-                          </button>
-                          <button id="justifyCenter" class="option-button align">
-                            <i class="fa-solid fa-align-center"></i>
-                          </button>
-                          <button id="justifyRight" class="option-button align">
-                            <i class="fa-solid fa-align-right"></i>
-                          </button>
-                          <button id="justifyFull" class="option-button align">
-                            <i class="fa-solid fa-align-justify"></i>
-                          </button>
-                          <button id="indent" class="option-button spacing">
-                            <i class="fa-solid fa-indent"></i>
-                          </button>
-                          <button id="outdent" class="option-button spacing">
-                            <i class="fa-solid fa-outdent"></i>
-                          </button>
-                          <!-- Headings -->
-                          <select id="formatBlock" class="adv-option-button">
-                            <option value="H1">H1</option>
-                            <option value="H2">H2</option>
-                            <option value="H3">H3</option>
-                            <option value="H4">H4</option>
-                            <option value="H5">H5</option>
-                            <option value="H6">H6</option>
-                          </select>
-                          <!-- Font -->
-                          <select id="fontName" class="adv-option-button"></select>
-                          <select id="fontSize" class="adv-option-button"></select>
-                          <!-- Color -->
-                          <div class="input-wrapper">
-                            <input type="color" id="foreColor" class="adv-option-button" />
-                            <label for="foreColor">Font Color</label>
-                          </div>
-                          <div class="input-wrapper">
-                            <input type="color" id="backColor" class="adv-option-button" />
-                            <label for="backColor">Highlight Color</label>
-                          </div>
-                        </div>
-                        <div id="text-input" contenteditable="true"></div>
-                      </div>
+                        <label class="form-label">Title</label>
+                        <input name="judul" type="text" class="form-control">
                     </div>
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Name Author</label>
-                      <input type="text" class="form-control">
+                        <label class="form-label">Isi Konten</label>
+                        <textarea name="isi" class="form-control" id="description" rows="10"></textarea>
                     </div>
-
 
                     <div class="text-center">
-                      <button type="button" class="btn btn-lg bg-gradient-primary btn-lg mt-4 mb-0">Tambah</button>
+                        <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg mt-4 mb-0">Tambah</button>
                     </div>
-                  </form>
+                </form>
             </div>
         </div>
     </div>
+    @push('scripts')
+        <script>
+            tinymce.init({
+                selector: 'textarea#description',
+                plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+                toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                tinycomments_mode: 'embedded',
+                tinycomments_author: 'Author name',
+                mergetags_list: [{
+                        value: 'First.Name',
+                        title: 'First Name'
+                    },
+                    {
+                        value: 'Email',
+                        title: 'Email'
+                    },
+                ]
+            });
+        </script>
+    @endpush
 </x-app-layout>
