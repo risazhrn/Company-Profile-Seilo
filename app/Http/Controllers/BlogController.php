@@ -91,24 +91,48 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Blog $blog)
     {
-        //
+        return view('admin.blog.edit', compact('blog'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Blog $blog)
     {
-        //
+        $request->validate([
+            'isi' => 'required',
+            'gambar' => 'image|max:2000|',
+            'judul' => 'required',
+        ]);
+
+        if ($request->hasFile('gambar')) {
+            $file = $request->gambar;
+            $path = $file->store('images');
+            $media = Media::create([
+                'name' => $file->getClientOriginalName(),
+                'type' => $file->getMimeType(),
+                'size' => $file->getSize(),
+                'path' => $path,
+            ]);
+            $blog->media_id = $media->id;
+        }
+
+        $blog->judul = $request->judul;
+        $blog->isi = $request->isi;
+        $blog->save();
+
+        return to_route('admin.blog.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+
+        return 'success';
     }
 }

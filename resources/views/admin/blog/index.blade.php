@@ -58,12 +58,14 @@
                                             class="text-secondary text-xs font-weight-bold">{{ $blog->created_at->diffForHumans() }}</span>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
-                                            data-toggle="tooltip" data-original-title="Edit artikel">
+                                        <a href="{{ route('admin.blog.edit', $blog) }}"
+                                            class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                            data-original-title="Edit artikel">
                                             Edit
                                         </a>
                                         |
-                                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                        <a href="javascript:;" data-id="{{ $blog->id }}"
+                                            class="text-secondary font-weight-bold text-xs btn-delete"
                                             data-toggle="tooltip" data-original-title="Hapus artikel">
                                             Hapus
                                         </a>
@@ -78,5 +80,34 @@
         </div>
     </div>
     </div>
-
+    @push('scripts')
+        <script>
+            $('.btn-delete').click((evt) => {
+                let url = '{{ route('admin.blog.destroy', ':id') }}';
+                url = url.replace(':id', $(evt.target).data('id'));
+                Swal.fire({
+                    title: 'Apakah kamu ingin menghapus blog?',
+                    showCancelButton: true,
+                    confirmButtonText: 'Ya',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url,
+                            type: 'DELETE',
+                            data: {
+                                _token: "{{ csrf_token() }}",
+                            },
+                            success: () => {
+                                Swal.fire('Dihapus!', '', 'berhasil')
+                                location.reload()
+                            },
+                            error: () => {
+                                Swal.fire('Dihapus!', '', 'gagal')
+                            }
+                        })
+                    }
+                })
+            })
+        </script>
+    @endpush
 </x-app-layout>

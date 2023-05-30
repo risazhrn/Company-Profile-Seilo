@@ -50,12 +50,17 @@ Route::middleware('auth')->group(function () {
             Route::get('/', 'indexAdmin')->name('index');
             Route::get('/add', 'create')->name('create');
             Route::post('/', 'store')->name('store');
+            Route::get('/edit/{blog}', 'edit')->name('edit');
+            Route::put('/{blog}', 'update')->name('update');
+            Route::delete('/{blog}', 'destroy')->name('destroy');
         });
 
         Route::prefix('program')->name('program.')->controller(ProgramController::class)->group(function () {
             Route::get('/', 'indexAdmin')->name('index');
             Route::get('/add', 'create')->name('create');
             Route::post('/', 'store')->name('store');
+            Route::get('/edit/{program}', 'edit')->name('edit');
+            Route::put('/{program}', 'update')->name('update');
         });
 
         Route::get('/users', function () {
