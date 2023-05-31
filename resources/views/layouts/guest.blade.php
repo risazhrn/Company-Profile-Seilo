@@ -23,6 +23,18 @@
     <link rel="stylesheet" href="{{ asset('css/elegantFont.css') }}">
     <link rel="stylesheet" href="{{ asset('css/default.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <style>
+        .product__overview ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+
+        }
+
+        .product__overview ul li {
+            display: list-item;
+            list-style: circle;
+        }
+    </style>
 </head>
 
 <body>

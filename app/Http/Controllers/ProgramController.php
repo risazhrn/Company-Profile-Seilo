@@ -80,9 +80,9 @@ class ProgramController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Program $program)
     {
-        //
+        return view('program.detail', compact('program'));
     }
 
     /**

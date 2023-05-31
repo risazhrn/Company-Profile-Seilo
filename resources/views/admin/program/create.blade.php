@@ -26,7 +26,7 @@
 
                     <div class="input-group input-group-outline mb-3">
                         <label class="form-label">Judul</label>
-                        <input type="text" class="form-control" name="judul" {{ old('judul') }}>
+                        <input type="text" class="form-control" name="judul" value="{{ old('judul') }}">
                     </div>
                     <x-input-error :messages="$errors->get('judul')" class="mt-2" />
 
@@ -64,12 +64,17 @@
     </div>
     @push('scripts')
         <script>
-            tinymce.init({
-                selector: 'textarea#description',
-                plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-                toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-                tinycomments_mode: 'embedded',
-            });
+            ClassicEditor
+                .create(document.querySelector('textarea#description'))
+                .catch(error => {
+                    console.error(error);
+                })
+            // tinymce.init({
+            //     selector: 'textarea#description',
+            //     plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            //     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            //     tinycomments_mode: 'embedded',
+            // });
         </script>
     @endpush
 </x-app-layout>

@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-xxl-4 col-xl-4 col-lg-4 order-lg-first order-last">
                         <div class="product__sidebar mr-30">
-                            <div class="product__sidebar-widget  white-bg mb-30">
+                            {{-- <div class="product__sidebar-widget  white-bg mb-30">
                                 <div class="sidebar__widget mb-20">
                                     <form action="#">
                                         <div
@@ -196,7 +196,7 @@
                                         </div>
                                     </form>
                                 </div>
-                            </div>
+                            </div> --}}
                             {{-- <div class="sidebar__banner"
                                 data-background="{{ asset('img/banner/sidebar-banner.jpg') }}">
                                 <h4 class="sidebar__banner-title">Check Out <br>Our free Templates</h4>
@@ -219,8 +219,7 @@
                                                 {{-- <a href="#" class="m-btn m-btn-6 mb-15">
                                                     Buy Now
                                                 </a> --}}
-                                                <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
-                                                    target="_blank" class="m-btn m-btn-7">
+                                                <a href="{{ route('program.show', $program) }}" class="m-btn m-btn-7">
                                                     Lihat Program
                                                 </a>
                                             </div>

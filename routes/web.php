@@ -30,6 +30,7 @@ Route::prefix('blog')->name('blog.')->controller(BlogController::class)->group(f
 
 Route::prefix('program')->name('program.')->controller(ProgramController::class)->group(function () {
     Route::get('/', 'index')->name('index');
+    Route::get('/{program}', 'show')->name('show');
 });
 
 Route::get('/about', function () {
