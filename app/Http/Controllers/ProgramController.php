@@ -90,21 +90,48 @@ class ProgramController extends Controller
      */
     public function edit(Program $program)
     {
-        dd($program);
+        return view('admin.program.edit', compact('program'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Program $program)
     {
-        //
+        $request->validate([
+            'gambar' => 'image|max:2000|',
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'tgl_dibuka' => 'required|date',
+            'tgl_ditutup' => 'required|date|after_or_equal:tgl_dibuka',
+            'aktif' => 'required',
+        ]);
+
+        if ($request->hasFile('gambar')) {
+            $file = $request->gambar;
+            $path = $file->store('images');
+            $media = Media::create([
+                'name' => $file->getClientOriginalName(),
+                'type' => $file->getMimeType(),
+                'size' => $file->getSize(),
+                'path' => $path,
+            ]);
+            $program->media_id = $media->id;
+        }
+        $program->judul = $request->judul;
+        $program->deskripsi = $request->deskripsi;
+        $program->tgl_dibuka = $request->tgl_dibuka;
+        $program->tgl_ditutup = $request->tgl_ditutup;
+        $program->aktif = $request->aktif;
+        $program->save();
+
+        return to_route('admin.program.index')->with('success', 'Berhasil mengubah program.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Program $program)
     {
         //
     }

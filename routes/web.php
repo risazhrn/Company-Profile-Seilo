@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\UserController;
 use App\Models\Program;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,10 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/dashboard', function () {
+    if (Auth::user()->role === 2) {
+        return redirect('/');
+    }
+
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -44,7 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::prefix('admin')->name('admin.')->group(function () {
+    Route::prefix('admin')->middleware('role:0,1')->name('admin.')->group(function () {
 
         Route::prefix('blog')->controller(BlogController::class)->name('blog.')->group(function () {
             Route::get('/', 'indexAdmin')->name('index');
@@ -63,9 +68,13 @@ Route::middleware('auth')->group(function () {
             Route::put('/{program}', 'update')->name('update');
         });
 
-        Route::get('/users', function () {
-            return view('admin.user.index');
-        })->name('admin.users');
+        Route::prefix('user')->name('user.')->controller(UserController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/add', 'create')->name('create');
+            Route::post('/', 'store')->name('store');
+            Route::get('/edit/{user}', 'edit')->name('edit');
+            Route::put('/{user}', 'update')->name('update');
+        });
 
     });
 });

@@ -123,7 +123,7 @@ class BlogController extends Controller
         $blog->isi = $request->isi;
         $blog->save();
 
-        return to_route('admin.blog.index');
+        return to_route('admin.blog.index')->with('success', 'Berhasil mengubah postingan blog.');
     }
 
     /**

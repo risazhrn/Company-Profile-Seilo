@@ -38,6 +38,10 @@
             max-width: 80%;
             margin: 20px auto;
         }
+
+        button#btn-logout:hover {
+            background-color: rgba(52, 71, 103, 0.7);
+        }
     </style>
 </head>
 

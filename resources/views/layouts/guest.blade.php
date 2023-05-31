@@ -5,24 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'SEILO') }} - {{ $title}}</title>
+    <title>{{ config('app.name', 'SEILO') }} - {{ $title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/Logogram.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/Logogram.png') }}">
     <!-- CSS here -->
-    <link rel="stylesheet" href="{{asset('css/preloader.css')}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/backToTop.css')}}">
-    <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/fontAwesome5Pro.css')}}">
-    <link rel="stylesheet" href="{{asset('css/elegantFont.css')}}">
-    <link rel="stylesheet" href="{{asset('css/default.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/preloader.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/meanmenu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/backToTop.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontAwesome5Pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/elegantFont.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/default.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
@@ -56,12 +56,12 @@
                                 <div class="footer__widget-content">
                                     <div class="footer__social mb-30">
                                         <ul>
-                                            <li><a href="#" class="fb"><i
-                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
                                             <li><a href="#" class="tw"><i class="fab fa-twitter"></i></a>
                                             </li>
-                                            <li><a href="#" class="pin"><i
-                                                        class="fab fa-pinterest-p"></i></a></li>
+                                            <li><a href="#" class="pin"><i class="fab fa-pinterest-p"></i></a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="footer__lang">
@@ -174,21 +174,43 @@
     <!-- footer area end -->
 
     <!-- JS here -->
-    <script src="{{asset('js/vendor/jquery-3.5.1.min.js')}}"></script>
-    <script src="{{asset('js/vendor/waypoints.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
-    <script src="{{asset('js/slick.min.js')}}"></script>
-    <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
-    <script src="{{asset('js/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('js/parallax.min.js')}}"></script>
-    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('js/backToTop.js')}}"></script>
-    <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('js/ajax-form.js')}}"></script>
-    <script src="{{asset('js/wow.min.js')}}"></script>
-    <script src="{{asset('js/imagesloaded.pkgd.min.js')}}"></script>
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('js/vendor/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/parallax.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/backToTop.js') }}"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('js/ajax-form.js') }}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript">
+        @if (Session::has('success'))
+            Swal.fire({
+                title: 'Success!',
+                text: "{{ Session::get('success') }}",
+                timer: 5000,
+                icon: 'success'
+            }).then((value) => {
+                //location.reload();
+            }).catch(swal.noop);
+        @elseif (Session::has('fail'))
+            Swal.fire({
+                title: 'Oops!',
+                text: "{{ Session::get('fail') }}",
+                icon: 'error',
+                timer: 5000
+            }).then((value) => {
+                //location.reload();
+            }).catch(swal.noop);
+        @endif
+    </script>
 </body>
 
 </html>
