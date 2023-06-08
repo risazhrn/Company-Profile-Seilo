@@ -48,7 +48,7 @@
                                 <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
                             </div>
                             <div class="header__btn d-none d-xl-block">
-                                <a href="#" class="m-btn m-btn-2">get started</a>
+                                <a href="{{ route('register') }}" class="m-btn m-btn-2">get started</a>
                             </div>
                         @endguest
 
