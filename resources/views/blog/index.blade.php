@@ -46,17 +46,14 @@
                                     </div>
                                     <div class="postbox__content">
                                         <div class="postbox__meta d-flex mb-10">
-                                            <div class="postbox__tag mr-20">
-                                                <a href="#">marketing</a>
-                                            </div>
                                             <div class="postbox__date">
                                                 <span><i class="fal fa-clock"></i>
                                                     {{ $blog->created_at->diffForHumans() }}</span>
                                             </div>
                                         </div>
-                                        <h3 class="postbox__title mb-15"><a
+                                        <h1 class="postbox__title mb-15 fs-1"><a
                                                 href="{{ route('blog.detail', $blog->slug) }}">{{ $blog->judul }}</a>
-                                        </h3>
+                                        </h1>
                                         <div class="postbox__text mb-20">
                                             <p>{!! $blog->isi !!}</p>
                                         </div>

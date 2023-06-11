@@ -69,20 +69,15 @@
        <div class="row">
           <div class="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2">
              <div class="page__title-wrapper text-center mb-55">
-                <h2 class="page__title-2">Sign in to <br>  recharge direct.</h2>
-                <p>it you don't have an account you can <a href="#">Register here!</a></p>
+                <h2 class="page__title-2">Sign In</h2>
+                <p>If you don't have an account you can <a href="{{route('register')}}">Register here!</a></p>
              </div>
           </div>
        </div>
        <div class="row">
           <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
              <div class="sign__wrapper white-bg">
-                {{-- <div class="sign__header mb-35">
-                   <div class="sign__in text-center">
-                      <a href="#" class="sign__social g-plus text-start mb-15"><i class="fab fa-google-plus-g"></i>Sign In with Google</a>
-                      <p> <span>........</span> Or, <a href="sign-in.html">sign in</a> with your email<span> ........</span> </p>
-                   </div>
-                </div> --}}
+               
                 <div class="sign__form">
                    <form method="POST" action="{{route('login')}}">
                     @csrf
@@ -112,15 +107,15 @@
                                </label>
                          </div>
                          @if (Route::has('password.request'))
-                         <div class="sign__forgot">
+                         {{-- <div class="sign__forgot">
                             <a href="{{route('password.request')}}">Forgot your password?</a>
-                         </div>
+                         </div> --}}
             @endif
 
                       </div>
                       <button class="m-btn m-btn-4 w-100" type="submit"> <span></span> Sign In</button>
                       <div class="sign__new text-center mt-20">
-                         <p>New to Markit? <a href="{{route('register')}}">Sign Up</a></p>
+                         <p>Create an account? <a href="{{route('register')}}">Sign Up</a></p>
                       </div>
                    </form>
                 </div>

@@ -10,7 +10,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xxl-7 col-xl-7 col-lg-8 d-none d-lg-block">
+                <div class="col-xxl-7 col-xl-7 col-lg-6 d-none d-lg-block">
                     <div class="main-menu d-flex justify-content-end">
                         <nav id="mobile-menu">
                             <ul>
@@ -28,7 +28,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-8 col-6">
+                <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-8 col-6">
                     <div class="header__action d-flex align-items-center justify-content-end">
 
                         @auth
@@ -167,8 +167,8 @@
         </div>
         <div class="sidebar__content">
             <div class="logo mb-40">
-                <a href="index.html">
-                    <img src="{{ asset('img/logo/logo-white.png') }}" alt="logo">
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('img/logo/Logo_Seilo.png') }}" alt="logo">
                 </a>
             </div>
             <div class="mobile-menu"></div>

@@ -14,7 +14,7 @@
 
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('dashboard') ? 'active bg-gradient-primary' : '' }}"
                     href="{{ route('dashboard') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -22,7 +22,7 @@
                     </div>
                     <span class="nav-link-text ms-1">Dashboard</span>
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('admin.blog.index', 'admin.blog.create') ? 'active bg-gradient-primary' : '' }}"
                     href="{{ route('admin.blog.index') }}">
@@ -76,14 +76,6 @@
                     </button>
                 </form>
             </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link text-white " href="../pages/sign-up.html">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">assignment</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Sign Up</span>
-                </a>
-            </li> --}}
-        </ul>
+            
     </div>
 </aside>

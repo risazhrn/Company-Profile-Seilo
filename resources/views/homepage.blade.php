@@ -66,7 +66,7 @@
                             <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="product__thumb">
                                     <div class="product__thumb-inner fix w-img">
-                                        <a href="product-details.html">
+                                        <a href="{{route('program.show', $program) }}">
                                             <img src="{{ asset($program->media->path) }}" alt="">
                                         </a>
                                     </div>
@@ -74,7 +74,7 @@
                                         {{-- <a href="#" class="m-btn m-btn-6 mb-15">
                                             Buy Now
                                         </a> --}}
-                                        <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        <a href="{{route('program.show', $program) }}"
                                             target="_blank" class="m-btn m-btn-7">
                                             Lihat Program
                                         </a>
@@ -141,7 +141,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="ui-tab" data-bs-toggle="tab"
                                         data-bs-target="#ui" type="button" role="tab" aria-controls="ui"
-                                        aria-selected="false">Mision</button>
+                                        aria-selected="false">Mission</button>
                                 </li>
                             </ul>
                         </div>

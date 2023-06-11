@@ -152,23 +152,6 @@
                             </div>
                         </div>
                         
-                        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4">
-                            <div class="footer__widget mb-40 wow fadeInUp" data-wow-delay=".5s">
-                                <div class="footer__widget-head">
-                                    <h4 class="footer__widget-title">Menu</h4>
-                                </div>
-                                <div class="footer__widget-content">
-                                    <div class="footer__link">
-                                        <ul>
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Program</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

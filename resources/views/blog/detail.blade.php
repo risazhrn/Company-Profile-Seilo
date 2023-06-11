@@ -104,7 +104,7 @@
                             <a href="#">Design</a>
                             <a href="#">UI/UX</a>
                         </div> --}}
-                        <div class="postbox__share m-social mb-80">
+                        {{-- <div class="postbox__share m-social mb-80">
                             <h5>The share</h5>
                             <ul>
                                 <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a></li>
@@ -112,7 +112,7 @@
                                 <li><a href="#" class="pin"><i class="fab fa-pinterest-p"></i></a></li>
                                 <li><a href="#" class="link"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                         {{-- <div class="postbox__author-3 d-sm-flex grey-bg-2 mb-85">
                             <div class="postbox__author-thumb-3 mr-20">
                                 <img src="{{ asset('img/blog/author/blog-author-5.jpg') }}" alt="">
@@ -123,7 +123,7 @@
                                     smashing cheeky pear shaped, mufty super.</p>
                             </div>
                         </div> --}}
-                        <div class="postbox__recent mb-60">
+                        {{-- <div class="postbox__recent mb-60">
                             <h4>Recent Posts</h4>
 
                             <div class="row">
@@ -181,7 +181,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <div class="latest-comments mb-55">
                             <h3>2 Comments</h3>
                             <ul>
@@ -299,7 +299,7 @@
                         </div> --}}
                     </div>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4">
+                {{-- <div class="col-xxl-4 col-xl-4 col-lg-4">
                     <div class="blog__sidebar-wrapper  ml-30">
                         <div class="blog__sidebar mb-30">
                             <div class="sidebar__widget mb-30">
@@ -402,7 +402,7 @@
                             <a href="product.html" class="m-btn m-btn-white"> <span></span> free template</a>
                         </div> --}}
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </section>
