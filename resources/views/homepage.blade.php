@@ -23,7 +23,7 @@
                                 <span>Let's Join</span><br>
                                 Our Program & Community.
                             </h2>
-                            <p>The bee's knees pardon you plastered it's all gone to pot cheeky bugger wind up down.</p>
+                            <p>Enhancing The Education Through Industrial Experience.</p>
                             <div class="hero__search">
                                 <form action="#">
                                     <div class="hero__search-inner d-xl-flex">
@@ -74,7 +74,7 @@
                                         {{-- <a href="#" class="m-btn m-btn-6 mb-15">
                                             Buy Now
                                         </a> --}}
-                                        <a href="{{route('program.show', $program) }}"
+                                        {{-- <a href="{{route('program.show', $program) }}"
 =======
                                         <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
 >>>>>>> f0de8e29916b57ea659d0e5731295574f56ad475
@@ -93,9 +93,9 @@
                             </div>
                         </div>
                     @empty
-                    @endforelse
+                    @endforelse --}}
 
-                </div>
+                {{-- </div>
                 <div class="row">
                     <div class="col-xxl-12">
                         <div class="product__more text-center mt-30">
@@ -105,8 +105,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- featured area end --> --}}
+        </section> --}}
+        <!-- featured area end --> 
 
         <!-- Program area start -->
         <section class="product__area pt-105 pb-110 grey-bg-2">
@@ -124,13 +124,10 @@
                         <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
                             <div class="product__thumb">
                                 <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                    <a href="https://wa.me/6285156326419?text=Saya%20tertarik%20dengan%20Paket%20Silver%20Media%20Pembelajaran%20Seilo" class="m-btn m-btn-6 mb-15">
                                         Order Sekarang
                                     </a>
-                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
-                                        target="_blank" class="m-btn m-btn-7">
-                                        Lihat Paket
-                                    </a> --}}
+                                    
                                 </div>
                                 <div class="product__content">
                                     <h3 class="product__title" style="font-size: 24px">
@@ -155,7 +152,7 @@
                         <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
                             <div class="product__thumb">
                                 <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                    <a href="https://wa.me/6285156326419?text=Saya%20tertarik%20dengan%20Paket%20Gold%20Media%20Pembelajaran%20Seilo" class="m-btn m-btn-6 mb-15">
                                         Order Sekarang
                                     </a>
                                     {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
@@ -205,13 +202,10 @@
                         <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
                             <div class="product__thumb">
                                 <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                    <a href="https://wa.me/6285156326419?text=Saya%20tertarik%20dengan%20Paket%20Silver%20Program%20Scaleup%20Seilo" class="m-btn m-btn-6 mb-15">
                                         Order Sekarang
                                     </a>
-                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
-                                        target="_blank" class="m-btn m-btn-7">
-                                        Lihat Paket
-                                    </a> --}}
+                                    
                                 </div>
                                 <div class="product__content">
                                     <h3 class="product__title" style="font-size: 24px">
@@ -238,13 +232,10 @@
                         <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
                             <div class="product__thumb">
                                 <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                    <a href="https://wa.me/6285156326419?text=Saya%20tertarik%20dengan%20Paket%20Gold%20Program%20Scaleup%20Seilo" class="m-btn m-btn-6 mb-15">
                                         Order Sekarang
                                     </a>
-                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
-                                        target="_blank" class="m-btn m-btn-7">
-                                        Lihat Paket
-                                    </a> --}}
+                                    
                                 </div>
                                 <div class="product__content">
                                     <h3 class="product__title" style="font-size: 24px">
@@ -273,7 +264,7 @@
                         <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
                             <div class="product__thumb">
                                 <div class="product__thumb-btn transition-3">
-                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                    <a href="https://wa.me/6285156326419?text=Saya%20tertarik%20dengan%20Paket%20Platinum%20Program%20Scaleup%20Seilo" class="m-btn m-btn-6 mb-15">
                                         Order Sekarang
                                     </a>
                                     {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"

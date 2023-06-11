@@ -84,9 +84,9 @@
                                         <ul>
                                             <li><a href="#" class="pin"><i class="fab fa-youtube"></i></a>
                                             </li>
-                                            <li><a href="#" class="tw"><i class="fab fa-whatsapp"></i></a>
+                                            <li><a href="https://wa.me/6285156326419?/" class="tw"><i class="fab fa-whatsapp"></i></a>
                                             </li>
-                                            <li><a href="#" class="fb"><i class="fab fa-instagram"></i></a>
+                                            <li><a href="https://www.instagram.com/seilobdg/" class="fb"><i class="fab fa-instagram"></i></a>
                                             </li>
                                         </ul>
                                     </div>
