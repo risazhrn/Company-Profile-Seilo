@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    $programs = Program::limit(3)->get();
+    $programs = Program::where('aktif', true)->limit(3)->get();
     return view('homepage', compact('programs'));
 })->name('home');
 
@@ -41,7 +41,7 @@ Route::get('/dashboard', function () {
     if (Auth::user()->role === 2) {
         return redirect('/');
     }
-
+    return to_route('profile.edit');
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 

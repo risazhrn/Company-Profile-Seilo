@@ -11,19 +11,17 @@
          </div>
          <!-- bg shape area end -->
 
-
          <!-- about area start -->
          <section class="about__area pt-100">
             <div class="container">
                <div class="row">
                   <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1">
                      <div class="about__wrapper">
-                        <span class="about__sub-title">About Markit</span>
-                        <h3 class="about__title">We're enabling <br> Everyone to create for the website.</h3>
-                        <div class="about__thumb w-img wow fadeInUp" data-wow-delay=".3s">
+                        <h3 class="about__title">Our History</h3>
+                        {{-- <div class="about__thumb w-img wow fadeInUp" data-wow-delay=".3s">
                            <img src="{{asset('img/about/about-1.jpg')}}" alt="">
-                        </div>
-                        <div class="about__count pt-50 pb-15 wow fadeInUp" data-wow-delay=".5s">
+                        </div> --}}
+                        {{-- <div class="about__count pt-50 pb-15 wow fadeInUp" data-wow-delay=".5s">
                            <div class="row">
                               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                                  <div class="about__count-item text-center launche mb-30">
@@ -44,10 +42,18 @@
                                  </div>
                               </div>
                            </div>
-                        </div>
+                        </div> --}}
                         <div class="about__content">
-                           <p class="about__text">Tomfoolery nice one have it cup of tea wind up bugger on your bike mate cobblers Queen's English, it's all gone to pot mush a load of old tosh off his nut I don't want no agro up the duff. Blower excuse my French William squiffy bender young delinquent the little rotter pardon me bubble and squeak baking cakes don't get shirty with me!</p>
-                           <p class="about__sub-text">With their varied backgrounds, our engineers collaborate with the other roles at Automattic to define, implement, and improve the experience those engines provide and enable.</p>
+                           {{-- <p class="about__text">Tomfoolery nice one have it cup of tea wind up bugger on your bike mate cobblers Queen's English, it's all gone to pot mush a load of old tosh off his nut I don't want no agro up the duff. Blower excuse my French William squiffy bender young delinquent the little rotter pardon me bubble and squeak baking cakes don't get shirty with me!</p> --}}
+                           <p class="about__sub-text" style="text-align: justify">
+                              SEILO, didirikan pada tahun 2021 dengan semangat untuk mengubah lanskap pendidikan dan pengembangan keterampilan vokasional. Dalam waktu singkat sejak pendiriannya, kami telah mencapai berbagai prestasi yang memperkuat perjalanan kami. Salah satu prestasi yang signifikan adalah memperoleh pendanaan sebesar 60 juta dari Telkom Indonesia, salah satu perusahaan telekomunikasi terkemuka di Indonesia. Pendanaan ini memungkinkan kami untuk memperluas jangkauan layanan kami, meningkatkan infrastruktur teknologi, dan mendukung pengembangan konten pembelajaran yang lebih komprehensif.
+
+                              Perjalanan kami dimulai dengan melibatkan komunitas pendidik dan para profesional muda dalam pengembangan produk kami. Dengan mendengarkan kebutuhan mereka, kami merancang platform yang menawarkan akses mudah ke konten pembelajaran yang relevan, interaktif, dan praktis. Dalam waktu singkat, kami berhasil meluncurkan berbagai program pembelajaran vokasional yang meliputi berbagai industri, mulai dari teknologi informasi hingga keuangan dan kreatif.
+                              
+                              Perusahaan kami telah membangun kemitraan yang kuat dengan institusi pendidikan, organisasi industri, dan pemangku kepentingan lainnya. Kolaborasi kami dengan lembaga-lembaga terkemuka memungkinkan kami untuk menyajikan kurikulum yang sesuai dengan tuntutan pasar dan kebutuhan pekerjaan saat ini. Kami juga terus berupaya untuk melibatkan para profesional dan ahli di berbagai bidang dalam pengembangan dan pemutakhiran konten kami agar tetap relevan dan mutakhir.
+                              
+                              Kami sangat bersemangat dan berkomitmen untuk terus berinovasi dan meningkatkan layanan kami agar dapat memenuhi kebutuhan pendidikan dan pengembangan keterampilan vokasional yang semakin berkembang. Dengan fokus pada kualitas, aksesibilitas, dan pengalaman pengguna yang unggul, kami bertekad untuk menjadi mitra belajar yang terpercaya bagi semua siswa yang ingin mencapai keunggulan dan sukses dalam karier mereka.   
+                           </p>
                         </div>
                      </div>
                   </div>
@@ -57,167 +63,226 @@
          <!-- about area end -->
 
          <!-- brand area start -->
-         <div class="brand__area pb-65 pt-80">
+         <section class="faq__area grey-bg-2 pt-105 pb-125">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+                        <div class="section__title-wrapper text-center mb-65">
+                            <h2 class="section__title">About Seilo</h2>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-3">
+                            <div class="faq__tab wow fadeInLeft" data-wow-delay=".3s">
+                                <ul class="nav nav-tabs" id="faqTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="sale-tab" data-bs-toggle="tab"
+                                            data-bs-target="#sale" type="button" role="tab" aria-controls="sale"
+                                            aria-selected="true">Goals</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="template-tab" data-bs-toggle="tab"
+                                            data-bs-target="#template" type="button" role="tab"
+                                            aria-controls="template" aria-selected="false">Vision</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="ui-tab" data-bs-toggle="tab"
+                                            data-bs-target="#ui" type="button" role="tab" aria-controls="ui"
+                                            aria-selected="false">Mission</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9">
+                            <div class="faq__tab-content wow fadeInRight" data-wow-delay=".7s">
+                                <div class="tab-content" id="faqTabContent">
+    
+                                    <div class="tab-pane fade show active" id="sale" role="tabpanel"
+                                        aria-labelledby="sale-tab">
+                                        <div class="accordion" id="sale-accordion">
+    
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        Our Goals
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#sale-accordion">
+                                                    <div class="accordion-body">
+                                                        <ul class="list">
+                                                            <li>Menyediakan platform belajar yang komprehensif dan
+                                                                interaktif untuk memfasilitasi pengembangan keterampilan
+                                                                vokasional dan profesional bagi para siswa.</li>
+                                                            <li>Membantu siswa dalam meningkatkan kualifikasi mereka dan
+                                                                persiapan karier melalui akses ke program pembelajaran yang
+                                                                relevan dan berkualitas.</li>
+                                                            <li>Menyediakan sumber daya pendidikan yang bervariasi, seperti
+                                                                kursus online, materi pelajaran, dan alat evaluasi, untuk
+                                                                memenuhi kebutuhan belajar siswa.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="tab-pane fade" id="template" role="tabpanel"
+                                        aria-labelledby="template-tab">
+                                        <div class="accordion" id="template-accordion">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingSix">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                        aria-expanded="false" aria-controls="collapseSix">
+                                                        Our Vision
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSix" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingSix" data-bs-parent="#template-accordion">
+                                                    <div class="accordion-body">
+                                                        <p>Menjadi platform pilihan utama bagi siswa yang ingin
+                                                            memperluas pengetahuan dan meningkatkan persiapan karier
+                                                            mereka melalui pembelajaran vokasional dan pengembangan
+                                                            keterampilan.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+    
+                                    <div class="tab-pane fade" id="ui" role="tabpanel"
+                                        aria-labelledby="ui-tab">
+                                        <div class="accordion" id="ui-accordion">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingSix">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                        aria-expanded="false" aria-controls="collapseSix">
+                                                        Our Mission
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSix" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingSix" data-bs-parent="#ui-accordion">
+                                                    <div class="accordion-body">
+                                                        <ul class='list'>
+                                                            <li>
+                                                                Menyediakan aksesibilitas dan ketersediaan yang luas terhadap program pembelajaran vokasional dan profesional berkualitas tinggi.
+                                                            </li>
+                                                            <li>
+                                                                Menghadirkan konten pembelajaran yang inovatif dan menarik dengan menggunakan teknologi terkini untuk meningkatkan keterlibatan siswa.
+                                                            </li>
+                                                            <li>
+                                                                Menyediakan dukungan dan panduan untuk membantu siswa merencanakan dan mencapai tujuan karier mereka.
+                                                            </li>
+                                                            <li>
+                                                                Membangun jaringan kemitraan dengan lembaga pendidikan dan industri terkait untuk memastikan relevansi dan kualitas program pembelajaran.
+                                                            </li>
+                                                            <li>
+                                                                Menggunakan data dan analisis pembelajaran untuk memberikan wawasan yang berharga kepada siswa dalam mengukur kemajuan mereka dan mengidentifikasi area pengembangan yang perlu diperhatikan.
+                                                            </li>
+                                                            <li>
+                                                                Memberikan pengalaman pengguna yang intuitif dan menyenangkan melalui antarmuka yang ramah pengguna dan desain responsif.
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+         <!-- brand area end --> 
+
+         <!-- testimonial area start -->
+         <div class="testimonial__area pb-100 fix">
             <div class="container">
                <div class="row">
-                  <div class="col-xxl-12">
-                     <div class="brand__slider owl-carousel wow fadeInUp" data-wow-delay=".5s">
-                        <div class="brand__thumb">
-                           <img src="{{asset('img/brand/brand-1.png')}}" alt="">
-                        </div>
-                        <div class="brand__thumb">
-                           <img src="{{asset('img/brand/brand-2.png')}}" alt="">
-                        </div>
-                        <div class="brand__thumb">
-                           <img src="{{asset('img/brand/brand-3.png')}}" alt="">
-                        </div>
-                        <div class="brand__thumb">
-                           <img src="{{asset('img/brand/brand-4.png')}}" alt="">
-                        </div>
-                        <div class="brand__thumb">
-                           <img src="{{asset('img/brand/brand-5.png')}}" alt="">
-                        </div>
+                  <div class="col-xxl-6 offset-xxl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                     <div class="section__title-wrapper text-center mb-45 wow fadeInUp" data-wow-delay=".3s">
+                        <h2 class="section__title" style="margin-top: 40px">Seilo Squad</h2>
+                        <p>Our Team</p>
                      </div>
                   </div>
                </div>
-            </div>
-         </div>
-         <!-- brand area end -->
-
-         <!-- testimonial area start -->
-         <div class="testimonial__area pb-110 fix">
-            <div class="container">
                <div class="testimonial__inner p-relative pb-110">
-                  <div class="testimonial__bg p-absolute">
-                     <img src="{{asset('img/bg/testimonial-bg.png')}}" alt="">
-                  </div>
                   <div class="row">
                      <div class="col-xxl-12">
                         <div class="testimonial__slider owl-carousel wow fadeInUp" data-wow-delay=".5s">
                            <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-1.jpg')}}" alt="">
+                              <div class="testimonial__person mb-20">
+                                 <div class="mb-15">
+                                    <img class="rounded" src="{{asset('img/foto/Reza.jpg')}}" alt="">
                                  </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Justin Case</h5>
-                                    <span>@justin</span>
+                                 <div class="testimonial__info m-auto">
+                                    <h5 style="text-align: center">M. Reza Raihan NR</h5>
                                  </div>
                               </div>
                               <div class="testimonial__text">
-                                 <p>Tomfoolery chimney pot loo easy peasy twit he lost his bottle lavatory excuse my French up the duff cup of char bender fantastic arse.!</p>
+                                 <p style="text-align: center">CEO</p>
                               </div>
                            </div>
                            <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
+                              <div class="testimonial__person mb-20">
+                                 <div class="mb-15">
+                                    <img class="rounded" src="{{asset('img/foto/Risa.jpg')}}" alt="">
                                  </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Gunther Beard</h5>
-                                    <span>@beard</span>
+                                 <div class="testimonial__info m-auto">
+                                    <h5 style="text-align: center">Risa Zahrani</h5>
                                  </div>
                               </div>
                               <div class="testimonial__text">
-                                 <p>Loo crikey bubble and sque wind up zonked arg bargy pukka nancy boy grub bog no biggie he nicked it what a load of rubbish pear shaped.!</p>
+                                 <p style="text-align: center">CTO</p>
                               </div>
                            </div>
                            <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-3.jpg')}}" alt="">
+                              <div class="testimonial__person mb-20">
+                                 <div class="mb-15">
+                                    <img class="rounded" src="{{asset('img/foto/Eka.jpg')}}" alt="">
                                  </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Joss Sticks</h5>
-                                    <span>@sticks</span>
+                                 <div class="testimonial__info m-auto">
+                                    <h5 style="text-align: center">Eka Dian Wananda</h5>
                                  </div>
                               </div>
                               <div class="testimonial__text">
-                                 <p>Tomfoolery chimney pot loo easy peasy twit he lost his bottle lavatory excuse my French up the duff cup of char bender fantastic  arse.!</p>
+                                 <p style="text-align: center">CFO</p>
                               </div>
                            </div>
                            <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-4.jpg')}}" alt="">
+                              <div class="testimonial__person mb-20">
+                                 <div class="mb-15">
+                                    <img class="rounded" src="{{asset('img/foto/Yopi.jpg')}}" alt="">
                                  </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Samuel Serif</h5>
-                                    <span>@justin</span>
+                                 <div class="testimonial__info m-auto">
+                                    <h5 style="text-align: center">Yopi Yuda Febrian</h5>
                                  </div>
                               </div>
                               <div class="testimonial__text">
-                                 <p>Loo crikey bubble and sque wind up zonked arg bargy pukka nancy boy grub bog no biggie he nicked it what a load of rubbish pear shaped.!</p>
+                                 <p style="text-align: center">COO</p>
                               </div>
                            </div>
+                           
                            <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
+                              <div class="testimonial__person mb-20">
+                                 <div class="mb-15">
+                                    <img class="rounded" src="{{asset('img/foto/Madova.jpg')}}" alt="">
                                  </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Shahnewaz Sakil</h5>
-                                    <span>@Shahnewaz</span>
+                                 <div class="testimonial__info m-auto">
+                                    <h5 style="text-align: center">March Madova Jovanovic</h5>
                                  </div>
                               </div>
                               <div class="testimonial__text">
-                                 <p>Loo crikey bubble and sque wind up zonked arg bargy pukka nancy boy grub bog no biggie he nicked it what a load of rubbish pear shaped.!</p>
-                              </div>
-                           </div>
-                           <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-3.jpg')}}" alt="">
-                                 </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Joss Sticks</h5>
-                                    <span>@sticks</span>
-                                 </div>
-                              </div>
-                              <div class="testimonial__text">
-                                 <p>Tomfoolery chimney pot loo easy peasy twit he lost his bottle lavatory excuse my French up the duff cup of char bender fantastic  arse.!</p>
-                              </div>
-                           </div>
-                           <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-2.jpg')}}" alt="">
-                                 </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Gunther Beard</h5>
-                                    <span>@beard</span>
-                                 </div>
-                              </div>
-                              <div class="testimonial__text">
-                                 <p>Loo crikey bubble and sque wind up zonked arg bargy pukka nancy boy grub bog no biggie he nicked it what a load of rubbish pear shaped.!</p>
-                              </div>
-                           </div>
-                           <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-4.jpg')}}" alt="">
-                                 </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Samuel Serif</h5>
-                                    <span>@justin</span>
-                                 </div>
-                              </div>
-                              <div class="testimonial__text">
-                                 <p>Loo crikey bubble and sque wind up zonked arg bargy pukka nancy boy grub bog no biggie he nicked it what a load of rubbish pear shaped.!</p>
-                              </div>
-                           </div>
-                           <div class="testimonial__item white-bg">
-                              <div class="testimonial__person d-flex mb-20">
-                                 <div class="testimonial__avater">
-                                    <img src="{{asset('img/testimonial/testi-1.jpg')}}" alt="">
-                                 </div>
-                                 <div class="testimonial__info ml-15">
-                                    <h5>Samuel Serif</h5>
-                                    <span>@justin</span>
-                                 </div>
-                              </div>
-                              <div class="testimonial__text">
-                                 <p>Loo crikey bubble and sque wind up zonked arg bargy pukka nancy boy grub bog no biggie he nicked it what a load of rubbish pear shaped.!</p>
+                                 <p style="text-align: center">CMO</p>
                               </div>
                            </div>
                         </div>
@@ -228,7 +293,7 @@
          </div>
          <!-- testimonial area end -->
 
-         <!-- cta area start -->
+         {{-- <!-- cta area start -->
          <section class="cta__area pb-60">
             <div class="container">
                <div class="row">
@@ -273,9 +338,9 @@
                </div>
             </div>
          </div>
-         <!-- community area end -->
+         <!-- community area end --> --}}
 
-         <!-- subscribe area start -->
+         {{-- <!-- subscribe area start -->
          <section class="subscribe__area p-relative pt-100 pb-110" data-background="{{asset('img/bg/subscribe-bg.jpg')}}">
             <div class="subscribe__icon">
                <img class="ps" src="{{asset('img/icon/subscribe/ps.png')}}" alt="">
@@ -302,7 +367,7 @@
                </div>
             </div>
          </section>
-         <!-- subscribe area end -->
+         <!-- subscribe area end --> --}}
       </main>
 
 </x-guest-layout>

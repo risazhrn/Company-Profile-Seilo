@@ -752,18 +752,18 @@ p {
   transform: skewX(45deg) scale(1, 1);
 }
 .m-social ul li a.fb {
-  background: #285da1;
-  border-color: #285da1;
+  background: #cc0088;
+  border-color: #cc0088;
 }
 .m-social ul li a.fb:hover {
-  color: #285da1;
+  color: #cc0088;
 }
 .m-social ul li a.tw {
-  background: #03a9f4;
-  border-color: #03a9f4;
+  background: #00cc2c;
+  border-color: #00cc2c;
 }
 .m-social ul li a.tw:hover {
-  color: #03a9f4;
+  color: #00cc2c;
 }
 .m-social ul li a.pin {
   background: #d2173f;
@@ -6845,16 +6845,16 @@ div.product_new_item a {
   z-index: 1;
 }
 .footer__social ul li a.fb {
-  background: #285da1;
+  background: #cc0088;
 }
 .footer__social ul li a.fb:hover {
-  color: #285da1;
+  color: #cc0088;
 }
 .footer__social ul li a.tw {
-  background: #03a9f4;
+  background: #00cc2c;
 }
 .footer__social ul li a.tw:hover {
-  color: #03a9f4;
+  color: #00cc2c;
 }
 .footer__social ul li a.pin {
   background: #d2173f;

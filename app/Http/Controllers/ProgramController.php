@@ -16,7 +16,7 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        $programs = Program::query()->orderBy('created_at', 'desc')->paginate(10);
+        $programs = Program::where('aktif', true)->orderBy('created_at', 'desc')->paginate(10);
         return view('program.index', compact('programs'));
     }
 

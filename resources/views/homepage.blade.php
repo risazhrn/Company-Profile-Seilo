@@ -38,19 +38,10 @@
                         </div>
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-                        <div class="hero__thumb-wrapper scene ml-70">
-                            <div class="hero__thumb one d-none d-lg-block">
-                                <img class="layer" data-depth="0.2" src="{{ asset('img/hero/hero-1.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="hero__thumb two">
-                                <img class="layer" data-depth="0.3" src="{{ asset('img/hero/hero-2.jpg') }}"
-                                    alt="">
-                            </div>
-                            <div class="hero__thumb three">
-                                <img class="layer" data-depth="0.4" src="{{ asset('img/hero/hero-3.jpg') }}"
-                                    alt="">
-                            </div>
+                        <div class="ml-70">
+
+                            <img class="layer image-hidden" width="500px" data-depth="0.2"
+                                src="{{ asset('img/startup.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -58,14 +49,13 @@
         </section>
         <!-- hero area end -->
 
-        <!-- Program area start -->
+        {{-- <!-- Program area start -->
         <section class="product__area pt-105 pb-110 grey-bg-2">
             <div class="container">
                 <div class="row">
                     <div class="col-xxl-12">
                         <div class="section__title-wrapper text-center mb-60">
                             <h2 class="section__title">Our Program</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                         </div>
                     </div>
                 </div>
@@ -75,29 +65,25 @@
                             <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="product__thumb">
                                     <div class="product__thumb-inner fix w-img">
-                                        <a href="product-details.html">
+                                        <a href="{{route('program.show', $program) }}">
                                             <img src="{{ asset($program->media->path) }}" alt="">
                                         </a>
                                     </div>
                                     <div class="product__thumb-btn transition-3">
+<<<<<<< HEAD
                                         {{-- <a href="#" class="m-btn m-btn-6 mb-15">
                                             Buy Now
                                         </a> --}}
+                                        <a href="{{route('program.show', $program) }}"
+=======
                                         <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+>>>>>>> f0de8e29916b57ea659d0e5731295574f56ad475
                                             target="_blank" class="m-btn m-btn-7">
                                             Lihat Program
                                         </a>
                                     </div>
                                 </div>
                                 <div class="product__content">
-                                    {{-- <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
-                                        <div class="product__tag">
-                                            <a href="#">Business</a>
-                                        </div>
-                                        <div class="product__price">
-                                            <span>$49</span>
-                                        </div>
-                                    </div> --}}
                                     <h3 class="product__title">
                                         <a href="product-details.html">{{ $program->judul }}</a>
                                     </h3>
@@ -120,6 +106,209 @@
                 </div>
             </div>
         </section>
+        <!-- featured area end --> --}}
+
+        <!-- Program area start -->
+        <section class="product__area pt-105 pb-110 grey-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="section__title-wrapper text-center mb-60">
+                            <h2 class="section__title">Paket Media Pembelajaran</h2>
+                            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Silver</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">2 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Materi disesuaikan dengan pelanggan</li>
+                                        <li>desain Media Pembelajaran</li>
+                                        <li>video Media Pembelajaran</li>
+                                        <li>Implementasi dari Seilo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Gold</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">4 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Materi disesuaikan dengan pelanggan</li>
+                                        <li>desain Media Pembelajaran</li>
+                                        <li>video Media Pembelajaran</li>
+                                        <li>Implementasi dari Seilo</li>
+                                        <li>konten yang lebih lengkap dan mendalam</li>
+                                        <li>pengerjaan lebih cepat dari pada paket silver</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- featured area end -->
+
+        <!-- Program area start -->
+        <section class="product__area pt-105 pb-110 grey-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="section__title-wrapper text-center mb-60">
+                            <h2 class="section__title">Paket Scaleup</h2>
+                            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Silver</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">4 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Pelatihan maksimum 10 peserta per mentor</li>
+                                        <li>Belajar dasar dan fundamental</li>
+                                        <li>Kelas dengan intensitas rendah</li>
+                                        <li>Pertemuan luring selama 2- 4 pertemuan selama 1 bulan</li>
+                                        <li>Dapat ditambah dengan kelas daring untuk progress reporting</li>
+                                        <li>Setiap pertemuan maksimal 2 jam</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Gold</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">7 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Pelatihan maksmum 10 peserta per mentor</li>
+                                        <li>Belajar kurikulum SEED ditambah dengan praktik studi kasus industri.</li>
+                                        <li>Kelas dengan intensitas sedang</li>
+                                        <li>Pertemuan luring selama 4-8 pertemuan selama 3 bulan.</li>
+                                        <li>Dapat ditambah dengan kelas daring untuk progress reporting dan bimbingan.
+                                        </li>
+                                        <li>Setiap pertemuan maksimal 2 jam.</li>
+                                        <li>Berkesempatan disalurkan ke perusahaan rekanan mitra</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Platinum</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">12 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Pelatihan maksimum 10 peserta per mentor</li>
+                                        <li>Belajar kurikulum BLOOMING ditambah dengan bimbingan projek intensif,
+                                            portofolio</li>
+                                        <li>Kelas dengan intensitas tinggi</li>
+                                        <li>Pertemuan luring selama 16 pertemuan selama 6 bulan.</li>
+                                        <li>Dapat ditambah dengan kelas daring untuk progress reporting dan bimbingan.
+                                        </li>
+                                        <li>Setiap pertemuan maksimal 2 jam.</li>
+                                        <li>Berkesempatan disalurkan ke perusahaan rekanan mitra.</li>
+                                        <li>Berkesempatan mendapatkan beasiswa kuliah.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- featured area end -->
 
         <!-- faq area start -->
@@ -129,7 +318,7 @@
                     <div class="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
                         <div class="section__title-wrapper text-center mb-65">
                             <h2 class="section__title">About Seilo</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, esse.</p>
+                            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, esse.</p> --}}
                         </div>
                     </div>
                 </div>
@@ -140,22 +329,17 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="sale-tab" data-bs-toggle="tab"
                                         data-bs-target="#sale" type="button" role="tab" aria-controls="sale"
-                                        aria-selected="true">Sales</button>
+                                        aria-selected="true">Goals</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="template-tab" data-bs-toggle="tab"
                                         data-bs-target="#template" type="button" role="tab"
-                                        aria-controls="template" aria-selected="false">Templates</button>
+                                        aria-controls="template" aria-selected="false">Vision</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="ui-tab" data-bs-toggle="tab"
                                         data-bs-target="#ui" type="button" role="tab" aria-controls="ui"
-                                        aria-selected="false">UI Design </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="xd-tab" data-bs-toggle="tab"
-                                        data-bs-target="#xd" type="button" role="tab" aria-controls="xd"
-                                        aria-selected="false">XD Files</button>
+                                        aria-selected="false">Mission</button>
                                 </li>
                             </ul>
                         </div>
@@ -163,101 +347,39 @@
                     <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9">
                         <div class="faq__tab-content wow fadeInRight" data-wow-delay=".7s">
                             <div class="tab-content" id="faqTabContent">
+
                                 <div class="tab-pane fade show active" id="sale" role="tabpanel"
                                     aria-labelledby="sale-tab">
                                     <div class="accordion" id="sale-accordion">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="true" aria-controls="collapseOne">
-                                                    Which plan should I choose?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                aria-labelledby="headingOne" data-bs-parent="#sale-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingTwo">
                                                 <button class="accordion-button" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                     aria-expanded="false" aria-controls="collapseTwo">
-                                                    Do you offer custom services & development?
+                                                    Our Goals
                                                 </button>
                                             </h2>
                                             <div id="collapseTwo" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingTwo" data-bs-parent="#sale-accordion">
                                                 <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    What are your office hours?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="headingThree" data-bs-parent="#sale-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFour">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">
-                                                    Can I get support for the free version?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                aria-labelledby="headingFour" data-bs-parent="#sale-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFive">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                    aria-expanded="false" aria-controls="collapseFive">
-                                                    Do your products support RTL?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFive" class="accordion-collapse collapse"
-                                                aria-labelledby="headingFive" data-bs-parent="#sale-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
+                                                    <ul class="list">
+                                                        <li>Menyediakan platform belajar yang komprehensif dan
+                                                            interaktif untuk memfasilitasi pengembangan keterampilan
+                                                            vokasional dan profesional bagi para siswa.</li>
+                                                        <li>Membantu siswa dalam meningkatkan kualifikasi mereka dan
+                                                            persiapan karier melalui akses ke program pembelajaran yang
+                                                            relevan dan berkualitas.</li>
+                                                        <li>Menyediakan sumber daya pendidikan yang bervariasi, seperti
+                                                            kursus online, materi pelajaran, dan alat evaluasi, untuk
+                                                            memenuhi kebutuhan belajar siswa.</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="template" role="tabpanel"
                                     aria-labelledby="template-tab">
                                     <div class="accordion" id="template-accordion">
@@ -266,279 +388,73 @@
                                                 <button class="accordion-button" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseSix"
                                                     aria-expanded="false" aria-controls="collapseSix">
-                                                    Do you offer custom services & development?
+                                                    Our Vision
                                                 </button>
                                             </h2>
                                             <div id="collapseSix" class="accordion-collapse collapse show"
                                                 aria-labelledby="headingSix" data-bs-parent="#template-accordion">
                                                 <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
+                                                    <p>Menjadi platform pilihan utama bagi siswa yang ingin
+                                                        memperluas pengetahuan dan meningkatkan persiapan karier
+                                                        mereka melalui pembelajaran vokasional dan pengembangan
+                                                        keterampilan.
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingSev">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSev"
-                                                    aria-expanded="false" aria-controls="collapseSev">
-                                                    What are your office hours?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSev" class="accordion-collapse collapse"
-                                                aria-labelledby="headingSev" data-bs-parent="#template-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingEig">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseEig"
-                                                    aria-expanded="false" aria-controls="collapseEig">
-                                                    Can I get support for the free version?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseEig" class="accordion-collapse collapse"
-                                                aria-labelledby="headingEig" data-bs-parent="#template-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingNine">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseNine"
-                                                    aria-expanded="false" aria-controls="collapseNine">
-                                                    Do your products support RTL?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseNine" class="accordion-collapse collapse"
-                                                aria-labelledby="headingNine" data-bs-parent="#template-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTen">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTen"
-                                                    aria-expanded="true" aria-controls="collapseTen">
-                                                    Which plan should I choose?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTen" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTen" data-bs-parent="#template-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="ui" role="tabpanel" aria-labelledby="ui-tab">
                                     <div class="accordion" id="ui-accordion">
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingEle">
+                                            <h2 class="accordion-header" id="headingSix">
                                                 <button class="accordion-button" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseEle"
-                                                    aria-expanded="false" aria-controls="collapseEle">
-                                                    Do you offer custom services & development?
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                    aria-expanded="false" aria-controls="collapseSix">
+                                                    Our Mission
                                                 </button>
                                             </h2>
-                                            <div id="collapseEle" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingEle" data-bs-parent="#ui-accordion">
+                                            <div id="collapseSix" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingSix" data-bs-parent="#ui-accordion">
                                                 <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
+                                                    <ul class='list'>
+                                                        <li>
+                                                            Menyediakan aksesibilitas dan ketersediaan yang luas
+                                                            terhadap program pembelajaran vokasional dan profesional
+                                                            berkualitas tinggi.
+                                                        </li>
+                                                        <li>
+                                                            Menghadirkan konten pembelajaran yang inovatif dan menarik
+                                                            dengan menggunakan teknologi terkini untuk meningkatkan
+                                                            keterlibatan siswa.
+                                                        </li>
+                                                        <li>
+                                                            Menyediakan dukungan dan panduan untuk membantu siswa
+                                                            merencanakan dan mencapai tujuan karier mereka.
+                                                        </li>
+                                                        <li>
+                                                            Membangun jaringan kemitraan dengan lembaga pendidikan dan
+                                                            industri terkait untuk memastikan relevansi dan kualitas
+                                                            program pembelajaran.
+                                                        </li>
+                                                        <li>
+                                                            Menggunakan data dan analisis pembelajaran untuk memberikan
+                                                            wawasan yang berharga kepada siswa dalam mengukur kemajuan
+                                                            mereka dan mengidentifikasi area pengembangan yang perlu
+                                                            diperhatikan.
+                                                        </li>
+                                                        <li>
+                                                            Memberikan pengalaman pengguna yang intuitif dan
+                                                            menyenangkan melalui antarmuka yang ramah pengguna dan
+                                                            desain responsif.
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwl">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwl"
-                                                    aria-expanded="false" aria-controls="collapseTwl">
-                                                    What are your office hours?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwl" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwl" data-bs-parent="#ui-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThi">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThi"
-                                                    aria-expanded="false" aria-controls="collapseThi">
-                                                    Can I get support for the free version?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThi" class="accordion-collapse collapse"
-                                                aria-labelledby="headingThi" data-bs-parent="#ui-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFourth">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFourth"
-                                                    aria-expanded="false" aria-controls="collapseFourth">
-                                                    Do your products support RTL?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFourth" class="accordion-collapse collapse"
-                                                aria-labelledby="headingFourth" data-bs-parent="#ui-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFiveth">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFivth"
-                                                    aria-expanded="true" aria-controls="collapseFivth">
-                                                    Which plan should I choose?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFivth" class="accordion-collapse collapse"
-                                                aria-labelledby="headingFiveth" data-bs-parent="#ui-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="xd" role="tabpanel" aria-labelledby="xd-tab">
-                                    <div class="accordion" id="xd-accordion">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingSixth">
-                                                <button class="accordion-button" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSixth"
-                                                    aria-expanded="false" aria-controls="collapseSixth">
-                                                    Do you offer custom services & development?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSixth" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingSixth" data-bs-parent="#xd-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingSevth">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSevth"
-                                                    aria-expanded="false" aria-controls="collapseSevth">
-                                                    What are your office hours?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSevth" class="accordion-collapse collapse"
-                                                aria-labelledby="headingSevth" data-bs-parent="#xd-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingEigth">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseEigth"
-                                                    aria-expanded="false" aria-controls="collapseEigth">
-                                                    Can I get support for the free version?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseEigth" class="accordion-collapse collapse"
-                                                aria-labelledby="headingEigth" data-bs-parent="#xd-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingNieth">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseNieth"
-                                                    aria-expanded="false" aria-controls="collapseNieth">
-                                                    Do your products support RTL?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseNieth" class="accordion-collapse collapse"
-                                                aria-labelledby="headingNieth" data-bs-parent="#xd-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwth">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwth"
-                                                    aria-expanded="true" aria-controls="collapseTwth">
-                                                    Which plan should I choose?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwth" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwth" data-bs-parent="#xd-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Only a quid cor blimey guvnor jolly good brolly gutted mate cup
-                                                        of tea cheers it grub blatant, some dodgy chav william buggered
-                                                        my good sir owt to do with me the bee's knees bubble and squeak.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -550,7 +466,7 @@
         <!-- faq area end -->
 
         <!-- testimonial area start -->
-        <section class="testimonial__area pt-105 pb-120 fix">
+        {{-- <section class="testimonial__area pt-105 pb-120 fix">
             <div class="container">
                 <div class="row">
                     <div class="col-xxl-12">
@@ -676,11 +592,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- testimonial area end -->
 
         <!-- cta area start -->
-        <section class="cta__area pb-145">
+        {{-- <section class="cta__area pb-145">
             <div class="container">
                 <div class="cta__bg cta__inner pt-90 pb-90">
                     <div class="row">
@@ -705,7 +621,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- cta area end -->
     </main>
 </x-guest-layout>
