@@ -40,8 +40,8 @@
                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                         <div class="ml-70">
 
-                            <img class="layer image-hidden" width="500px" data-depth="0.2" src="{{ asset('img/startup.png') }}"
-                                alt="">
+                            <img class="layer image-hidden" width="500px" data-depth="0.2"
+                                src="{{ asset('img/startup.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -49,14 +49,13 @@
         </section>
         <!-- hero area end -->
 
-        <!-- Program area start -->
+        {{-- <!-- Program area start -->
         <section class="product__area pt-105 pb-110 grey-bg-2">
             <div class="container">
                 <div class="row">
                     <div class="col-xxl-12">
                         <div class="section__title-wrapper text-center mb-60">
                             <h2 class="section__title">Our Program</h2>
-                            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
                         </div>
                     </div>
                 </div>
@@ -71,9 +70,6 @@
                                         </a>
                                     </div>
                                     <div class="product__thumb-btn transition-3">
-                                        {{-- <a href="#" class="m-btn m-btn-6 mb-15">
-                                            Buy Now
-                                        </a> --}}
                                         <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
                                             target="_blank" class="m-btn m-btn-7">
                                             Lihat Program
@@ -81,14 +77,6 @@
                                     </div>
                                 </div>
                                 <div class="product__content">
-                                    {{-- <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
-                                        <div class="product__tag">
-                                            <a href="#">Business</a>
-                                        </div>
-                                        <div class="product__price">
-                                            <span>$49</span>
-                                        </div>
-                                    </div> --}}
                                     <h3 class="product__title">
                                         <a href="product-details.html">{{ $program->judul }}</a>
                                     </h3>
@@ -106,6 +94,209 @@
                         <div class="product__more text-center mt-30">
                             <a href="{{ route('program.index') }}" class="m-btn m-btn-2"> <span></span> More
                                 Program</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- featured area end --> --}}
+
+        <!-- Program area start -->
+        <section class="product__area pt-105 pb-110 grey-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="section__title-wrapper text-center mb-60">
+                            <h2 class="section__title">Paket Media Pembelajaran</h2>
+                            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Silver</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">2 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Materi disesuaikan dengan pelanggan</li>
+                                        <li>desain Media Pembelajaran</li>
+                                        <li>video Media Pembelajaran</li>
+                                        <li>Implementasi dari Seilo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Gold</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">4 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Materi disesuaikan dengan pelanggan</li>
+                                        <li>desain Media Pembelajaran</li>
+                                        <li>video Media Pembelajaran</li>
+                                        <li>Implementasi dari Seilo</li>
+                                        <li>konten yang lebih lengkap dan mendalam</li>
+                                        <li>pengerjaan lebih cepat dari pada paket silver</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- featured area end -->
+
+        <!-- Program area start -->
+        <section class="product__area pt-105 pb-110 grey-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-12">
+                        <div class="section__title-wrapper text-center mb-60">
+                            <h2 class="section__title">Paket Scaleup</h2>
+                            {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Silver</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">4 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Pelatihan maksimum 10 peserta per mentor</li>
+                                        <li>Belajar dasar dan fundamental</li>
+                                        <li>Kelas dengan intensitas rendah</li>
+                                        <li>Pertemuan luring selama 2- 4 pertemuan selama 1 bulan</li>
+                                        <li>Dapat ditambah dengan kelas daring untuk progress reporting</li>
+                                        <li>Setiap pertemuan maksimal 2 jam</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Gold</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">7 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Pelatihan maksmum 10 peserta per mentor</li>
+                                        <li>Belajar kurikulum SEED ditambah dengan praktik studi kasus industri.</li>
+                                        <li>Kelas dengan intensitas sedang</li>
+                                        <li>Pertemuan luring selama 4-8 pertemuan selama 3 bulan.</li>
+                                        <li>Dapat ditambah dengan kelas daring untuk progress reporting dan bimbingan.
+                                        </li>
+                                        <li>Setiap pertemuan maksimal 2 jam.</li>
+                                        <li>Berkesempatan disalurkan ke perusahaan rekanan mitra</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        <div class="product__item white-bg mb-30 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="product__thumb">
+                                <div class="product__thumb-btn transition-3">
+                                    <a href="#" class="m-btn m-btn-6 mb-15">
+                                        Order Sekarang
+                                    </a>
+                                    {{-- <a href="https://themeforest.net/item/zibber-business-consulting-wordpress-theme/30120392"
+                                        target="_blank" class="m-btn m-btn-7">
+                                        Lihat Paket
+                                    </a> --}}
+                                </div>
+                                <div class="product__content">
+                                    <h3 class="product__title" style="font-size: 24px">
+                                        <a href="product-details.html">Paket Platinum</a>
+                                    </h3>
+                                    <div class="product__meta mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="product__price">
+                                            Rp<span style="font-size: 20px">12 juta</span>/bulan
+                                        </div>
+                                    </div>
+                                    <ul class="list" style="padding: 20px">
+                                        <li>Pelatihan maksimum 10 peserta per mentor</li>
+                                        <li>Belajar kurikulum BLOOMING ditambah dengan bimbingan projek intensif,
+                                            portofolio</li>
+                                        <li>Kelas dengan intensitas tinggi</li>
+                                        <li>Pertemuan luring selama 16 pertemuan selama 6 bulan.</li>
+                                        <li>Dapat ditambah dengan kelas daring untuk progress reporting dan bimbingan.
+                                        </li>
+                                        <li>Setiap pertemuan maksimal 2 jam.</li>
+                                        <li>Berkesempatan disalurkan ke perusahaan rekanan mitra.</li>
+                                        <li>Berkesempatan mendapatkan beasiswa kuliah.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,12 +395,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="ui" role="tabpanel"
-                                    aria-labelledby="ui-tab">
+                                <div class="tab-pane fade" id="ui" role="tabpanel" aria-labelledby="ui-tab">
                                     <div class="accordion" id="ui-accordion">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingSix">
@@ -224,28 +414,40 @@
                                                 <div class="accordion-body">
                                                     <ul class='list'>
                                                         <li>
-                                                            Menyediakan aksesibilitas dan ketersediaan yang luas terhadap program pembelajaran vokasional dan profesional berkualitas tinggi.
+                                                            Menyediakan aksesibilitas dan ketersediaan yang luas
+                                                            terhadap program pembelajaran vokasional dan profesional
+                                                            berkualitas tinggi.
                                                         </li>
                                                         <li>
-                                                            Menghadirkan konten pembelajaran yang inovatif dan menarik dengan menggunakan teknologi terkini untuk meningkatkan keterlibatan siswa.
+                                                            Menghadirkan konten pembelajaran yang inovatif dan menarik
+                                                            dengan menggunakan teknologi terkini untuk meningkatkan
+                                                            keterlibatan siswa.
                                                         </li>
                                                         <li>
-                                                            Menyediakan dukungan dan panduan untuk membantu siswa merencanakan dan mencapai tujuan karier mereka.
+                                                            Menyediakan dukungan dan panduan untuk membantu siswa
+                                                            merencanakan dan mencapai tujuan karier mereka.
                                                         </li>
                                                         <li>
-                                                            Membangun jaringan kemitraan dengan lembaga pendidikan dan industri terkait untuk memastikan relevansi dan kualitas program pembelajaran.
+                                                            Membangun jaringan kemitraan dengan lembaga pendidikan dan
+                                                            industri terkait untuk memastikan relevansi dan kualitas
+                                                            program pembelajaran.
                                                         </li>
                                                         <li>
-                                                            Menggunakan data dan analisis pembelajaran untuk memberikan wawasan yang berharga kepada siswa dalam mengukur kemajuan mereka dan mengidentifikasi area pengembangan yang perlu diperhatikan.
+                                                            Menggunakan data dan analisis pembelajaran untuk memberikan
+                                                            wawasan yang berharga kepada siswa dalam mengukur kemajuan
+                                                            mereka dan mengidentifikasi area pengembangan yang perlu
+                                                            diperhatikan.
                                                         </li>
                                                         <li>
-                                                            Memberikan pengalaman pengguna yang intuitif dan menyenangkan melalui antarmuka yang ramah pengguna dan desain responsif.
+                                                            Memberikan pengalaman pengguna yang intuitif dan
+                                                            menyenangkan melalui antarmuka yang ramah pengguna dan
+                                                            desain responsif.
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>

@@ -22,8 +22,8 @@
                                 <li class="{{ request()->routeIs('blog.index', 'blog.detail') ? 'active' : '' }}"><a
                                         href="{{ route('blog.index') }}">Blog</a>
                                 </li>
-                                <li class="{{ request()->routeIs('program.index') ? 'active' : '' }}"><a
-                                        href="{{ route('program.index') }}">Program</a></li>
+                                {{-- <li class="{{ request()->routeIs('program.index') ? 'active' : '' }}"><a
+                                        href="{{ route('program.index') }}">Program</a></li> --}}
                             </ul>
                         </nav>
                     </div>
