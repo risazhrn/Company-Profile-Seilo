@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    $programs = Program::where('aktif', true)->limit(3)->get();
-    return view('homepage', compact('programs'));
+    // $programs = Program::where('aktif', true)->limit(3)->get();
+    return view('homepage');
 })->name('home');
 
 Route::prefix('blog')->name('blog.')->controller(BlogController::class)->group(function () {

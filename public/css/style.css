@@ -1203,7 +1203,7 @@ p {
     top: 0;
     width: 320px;
     height: 100%;
-    background: #1b133f none repeat scroll 0 0;
+    background: #e9e9e9 none repeat scroll 0 0;
     overflow-y: scroll;
     -webkit-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
@@ -1235,7 +1235,7 @@ p {
     width: 50%;
 }
 .sidebar__tab .nav-tabs .nav-item .nav-link {
-    color: #ffffff;
+    color: #130d2d;
     background-color: transparent;
     border: none;
     font-size: 16px;
@@ -1247,10 +1247,10 @@ p {
     border-bottom: 2px solid transparent;
 }
 .sidebar__tab .nav-tabs .nav-item .nav-link.active {
-    background: #1b133f;
+    background: #e9e9e9;
 }
 .sidebar__tab .nav-tabs .nav-item .nav-link:hover {
-    background: #ffffff;
+    background: #130d2d;
     color: #1a152e;
 }
 .sidebar__close {
@@ -1270,7 +1270,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: #130d2d;
     border: 1px solid #2a3a57;
     border-radius: 50%;
     cursor: pointer;
@@ -1325,7 +1325,7 @@ p {
     -o-transform: translate(-50%, -50%);
 }
 .sidebar__info p {
-    color: #f7f7f9;
+    color: #130d2d;
     margin-bottom: 30px;
     line-height: 28px;
     font-size: 14px;
@@ -1336,15 +1336,15 @@ p {
 }
 .sidebar__contact ul li .icon i {
     line-height: 27px;
-    color: #f7f7f9;
+    color: #130d2d;
     margin-right: 15px;
 }
 .sidebar__contact ul li .text span {
-    color: #f7f7f9;
+    color: #130d2d;
     font-weight: 700;
 }
 .sidebar__contact ul li .text span a {
-    color: #f7f7f9;
+    color: #130d2d;
 }
 .sidebar__contact ul li:hover i,
 .sidebar__contact ul li:hover span {
@@ -1369,10 +1369,10 @@ p {
     outline: none;
     padding: 0 15px;
     background: #292151;
-    color: #f7f7f9;
+    color: #130d2d;
 }
 .sidebar__search input::placeholder {
-    color: #f7f7f9;
+    color: #130d2d;
 }
 .sidebar__search button {
     position: absolute;
@@ -1381,12 +1381,12 @@ p {
     height: 50px;
     width: 50px;
     line-height: 50px;
-    color: #f7f7f9;
+    color: #130d2d;
     background: transparent;
 }
 .sidebar__login a {
     font-size: 14px;
-    color: #ffffff;
+    color: #130d2d;
     font-weight: 500;
     padding-right: 15px;
     margin-right: 15px;
@@ -1396,11 +1396,11 @@ p {
     font-size: 18px;
 }
 .sidebar__login a:hover {
-    color: #ffffff;
+    color: #130d2d;
 }
 .sidebar__cart a {
     font-size: 20px;
-    color: #ffffff;
+    color: #130d2d;
     padding-right: 15px;
     margin-right: 15px;
     position: relative;
@@ -1416,14 +1416,14 @@ p {
     text-align: center;
     font-size: 14px;
     color: #1a152e;
-    background: #ffffff;
+    background: #130d2d;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
 .sidebar__cart a:hover span {
     background: #1a152e;
-    color: #ffffff;
+    color: #130d2d;
 }
 
 /* mean menu customize */
@@ -1457,7 +1457,7 @@ p {
 .mean-container .mean-nav ul li a {
     width: 100%;
     padding: 10px 0;
-    color: #fff;
+    color: #130d2d;
     border-top: 1px solid #2a3a57;
     font-size: 13px;
 }
@@ -1475,7 +1475,7 @@ p {
 }
 
 .mean-container .mean-nav ul li a.mean-expand:hover {
-    background: #ffffff;
+    background: #130d2d;
     color: #1a152e;
 }
 
@@ -1484,7 +1484,7 @@ p {
 }
 
 .mean-container .mean-nav ul li a.mean-expand.mean-clicked {
-    background: #ffffff;
+    background: #130d2d;
     color: #1a152e;
 }
 

@@ -172,7 +172,7 @@
                 </a>
             </div>
             <div class="mobile-menu"></div>
-            <div class="sidebar__action mt-330">
+            <div class="sidebar__action mt-200">
                 <div class="sidebar__login mt-15">
                     <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
                 </div>

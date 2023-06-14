@@ -68,8 +68,9 @@
         {{ $slot }}
     </main>
 
+    @include('layouts.footer')
     <!-- footer area start -->
-    <footer>
+    {{-- <footer>
         <div class="footer__area footer-bg">
             <div class="footer__top pt-90 pb-50">
                 <div class="container">
@@ -157,7 +158,7 @@
             </div>
 
         </div>
-    </footer>
+    </footer> --}}
     <!-- footer area end -->
 
     <!-- JS here -->

@@ -1203,7 +1203,7 @@ p {
     top: 0;
     width: 320px;
     height: 100%;
-    background: #1b133f none repeat scroll 0 0;
+    background: #e9e9e9 none repeat scroll 0 0;
     overflow-y: scroll;
     -webkit-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
@@ -1247,7 +1247,7 @@ p {
     border-bottom: 2px solid transparent;
 }
 .sidebar__tab .nav-tabs .nav-item .nav-link.active {
-    background: #1b133f;
+    background: #e9e9e9;
 }
 .sidebar__tab .nav-tabs .nav-item .nav-link:hover {
     background: #ffffff;

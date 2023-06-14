@@ -39,7 +39,7 @@
         <!-- hero area end -->
 
         <!-- pricing area start -->
-        <section class="pricing__area pt-100 pb-110">
+        <section id="price" class="pricing__area pt-100 pb-110">
             <div class="container">
                 <div class="row">
                     <div class="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2">
@@ -229,7 +229,7 @@
 
 
         <!-- testimonial area start -->
-        <section class="testimonial__area pt-105 pb-120 fix">
+        {{-- <section class="testimonial__area pt-105 pb-120 fix">
             <div class="container">
                 {{-- <div class="row">
                     <div class="col-xxl-12">
@@ -238,7 +238,7 @@
                             <p>Curabitur lacus arcu, sodales in quam sed, commodo efficitur ligula.</p>
                         </div>
                     </div>
-                </div> --}}
+                </div> 
                 <div class="row">
                     <div class="col-xxl-12">
                         <div class="testimonial__wrapper p-relative pb-135 wow fadeInUp" data-wow-delay=".5s">
@@ -355,7 +355,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- testimonial area end -->
 
         <!-- cta area start -->
