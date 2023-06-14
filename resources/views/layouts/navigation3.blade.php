@@ -41,7 +41,7 @@
                     <span class="nav-link-text ms-1">Manage Program</span>
                 </a>
             </li> --}}
-            @if (Auth::user()->role === 0)
+            @if (Auth::user()->role == 0)
                 <li class="nav-item">
                     <a class="nav-link text-white {{ request()->routeIs('admin.users') ? 'active bg-gradient-primary' : '' }}"
                         href="{{ route('admin.user.index') }}">

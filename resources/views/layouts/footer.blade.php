@@ -76,7 +76,7 @@
                 <p><i class="fas fa-phone pe-2"></i>+62 859-5612-5920</p>
               </li>
               <li>
-                <p><i class="fas fa-envelope pe-2 mb-0"></i>contact@seilo.com</p>
+                <p><i class="fas fa-envelope pe-2 mb-0"></i>searchinternshiplocation@gmail.com</p>
               </li>
             </ul>
           </div>

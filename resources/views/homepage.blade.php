@@ -83,7 +83,7 @@
                                     </div>
 
                                     <div class="pricing__buy mb-20">
-                                        <a href="#" class="m-btn m-btn-border m-btn-border-5 w-100"> <span></span>
+                                        <a href="https://wa.me/6285956125920?text=saya mau nanya" class="m-btn m-btn-border m-btn-border-5 w-100"> <span></span>
                                             Buy Now</a>
                                     </div>
                                     <div class="pricing__features text-start">
@@ -111,7 +111,7 @@
                                     </div>
 
                                     <div class="pricing__buy mb-20">
-                                        <a href="#" class="m-btn m-btn-border m-btn-border-5 w-100"> <span></span>
+                                        <a href="https://wa.me/6285956125920?text=saya mau nanya" class="m-btn m-btn-border m-btn-border-5 w-100"> <span></span>
                                             Buy Now</a>
                                     </div>
                                     <div class="pricing__features text-start">
@@ -142,7 +142,7 @@
                                         <h4>12Jt<span style="font-size:0.35em">/bulan</h4>
                                     </div>
                                     <div class="pricing__buy mb-20">
-                                        <a href="#" class="m-btn m-btn-border m-btn-border-5 w-100"> <span></span>
+                                        <a href="https://wa.me/6285956125920?text=saya mau nanya" class="m-btn m-btn-border m-btn-border-5 w-100"> <span></span>
                                             Buy Now</a>
                                     </div>
                                     <div class="pricing__features text-start">
@@ -179,7 +179,7 @@
                                     </div>
 
                                     <div class="pricing__buy mb-20">
-                                        <a href="#" class="m-btn m-btn-border m-btn-border-5 w-100">
+                                        <a href="https://wa.me/6285956125920?text=saya mau nanya" class="m-btn m-btn-border m-btn-border-5 w-100">
                                             <span></span> Buy Now</a>
                                     </div>
                                     <div class="pricing__features text-start">
@@ -204,7 +204,7 @@
                                     </div>
 
                                     <div class="pricing__buy mb-20">
-                                        <a href="#" class="m-btn m-btn-border m-btn-border-5 w-100">
+                                        <a href="https://wa.me/6285956125920?text=saya mau nanya" class="m-btn m-btn-border m-btn-border-5 w-100">
                                             <span></span> Buy Now</a>
                                     </div>
                                     <div class="pricing__features text-start">
