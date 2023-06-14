@@ -32,7 +32,7 @@
                     <span class="nav-link-text ms-1">Manage Blog</span>
                 </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('admin.program.index', 'admin.program.create') ? 'active bg-gradient-primary' : '' }}"
                     href="{{ route('admin.program.index') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -40,7 +40,7 @@
                     </div>
                     <span class="nav-link-text ms-1">Manage Program</span>
                 </a>
-            </li>
+            </li> --}}
             @if (Auth::user()->role === 0)
                 <li class="nav-item">
                     <a class="nav-link text-white {{ request()->routeIs('admin.users') ? 'active bg-gradient-primary' : '' }}"

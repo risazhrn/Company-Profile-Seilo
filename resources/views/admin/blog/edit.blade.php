@@ -3,8 +3,10 @@
     <div class="container-fluid py-4">
         <div class="mx-3 mx-md-4">
             <div class="card card-body">
-                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 d-flex justify-content-between align-items-center">
                     <h6 class="text-white text-capitalize ps-3">Update Blog</h6>
+                    <a class="btn btn-lg btn-lg my-0 me-3" style="background-color: #DCE0E3;"
+                        href="{{ route('admin.blog.index') }}">Kembali</a>
                 </div>
 
                 <form role="form" action="{{ route('admin.blog.update', $blog) }}" class="m-4" method="POST"

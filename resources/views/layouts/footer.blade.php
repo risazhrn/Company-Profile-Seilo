@@ -73,7 +73,7 @@
                 <p><i class="fas fa-map-marker-alt pe-2"></i>Bandung, Jawa Barat, Indonesia</p>
               </li>
               <li>
-                <p><i class="fas fa-phone pe-2"></i>+ 62 234 567 89</p>
+                <p><i class="fas fa-phone pe-2"></i>+62 859-5612-5920</p>
               </li>
               <li>
                 <p><i class="fas fa-envelope pe-2 mb-0"></i>contact@seilo.com</p>
@@ -110,8 +110,8 @@
   
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        © 2023 Copyright:
+        <a class="text-white" href="#">seilo.com</a>
       </div>
       <!-- Copyright -->
     </footer>

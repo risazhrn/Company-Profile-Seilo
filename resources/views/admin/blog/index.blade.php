@@ -7,7 +7,8 @@
                 <div
                     class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3 d-flex justify-content-between align-items-center">
                     <h6 class="text-white text-capitalize ps-3">Data Blog</h6>
-                    <a class="btn btn-lg bg-gradient-info btn-lg my-0 me-3" href="{{ route('admin.blog.create') }}">Tambah
+                    <a class="btn btn-lg btn-lg my-0 me-3" href="{{ route('admin.blog.create') }}" style="background-color: #DCE0E3
+                    ;">Tambah
                         Blog</a>
                 </div>
                 <div class="mt-2">
