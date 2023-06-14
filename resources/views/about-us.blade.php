@@ -17,7 +17,7 @@
                <div class="row">
                   <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1">
                      <div class="about__wrapper">
-                        <h3 class="about__title">Our History</h3>
+                        <h3 class="about__title" style="padding: 8px;">Our History</h3>
                         {{-- <div class="about__thumb w-img wow fadeInUp" data-wow-delay=".3s">
                            <img src="{{asset('img/about/about-1.jpg')}}" alt="">
                         </div> --}}
@@ -45,7 +45,7 @@
                         </div> --}}
                         <div class="about__content">
                            {{-- <p class="about__text">Tomfoolery nice one have it cup of tea wind up bugger on your bike mate cobblers Queen's English, it's all gone to pot mush a load of old tosh off his nut I don't want no agro up the duff. Blower excuse my French William squiffy bender young delinquent the little rotter pardon me bubble and squeak baking cakes don't get shirty with me!</p> --}}
-                           <p class="about__sub-text" style="text-align: justify">
+                           <p class="about__sub-text" style="text-align: justify;padding: 8px;">
                               SEILO, didirikan pada tahun 2021 dengan semangat untuk mengubah lanskap pendidikan dan pengembangan keterampilan vokasional. Dalam waktu singkat sejak pendiriannya, kami telah mencapai berbagai prestasi yang memperkuat perjalanan kami. Salah satu prestasi yang signifikan adalah memperoleh pendanaan sebesar 60 juta dari Telkom Indonesia, salah satu perusahaan telekomunikasi terkemuka di Indonesia. Pendanaan ini memungkinkan kami untuk memperluas jangkauan layanan kami, meningkatkan infrastruktur teknologi, dan mendukung pengembangan konten pembelajaran yang lebih komprehensif.
 
                               Perjalanan kami dimulai dengan melibatkan komunitas pendidik dan para profesional muda dalam pengembangan produk kami. Dengan mendengarkan kebutuhan mereka, kami merancang platform yang menawarkan akses mudah ke konten pembelajaran yang relevan, interaktif, dan praktis. Dalam waktu singkat, kami berhasil meluncurkan berbagai program pembelajaran vokasional yang meliputi berbagai industri, mulai dari teknologi informasi hingga keuangan dan kreatif.
