@@ -61,7 +61,7 @@ class BlogController extends Controller
                 'name' => $file->getClientOriginalName(),
                 'type' => $file->getMimeType(),
                 'size' => $file->getSize(),
-                'path' => $path,
+                'path' => 'storage/'.$path,
             ]);
         }
         try {
